@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Training-app/static/css/main.c06770de.css",
+    "main.js": "/Training-app/static/js/main.65cbac44.js",
+    "static/media/slide1.jpg": "/Training-app/static/media/slide1.4c93885b65f3c96088b2.jpg",
+    "static/media/slide2.jpg": "/Training-app/static/media/slide2.9c99dfd02ebce8bc0358.jpg",
+    "static/media/slide3.jpg": "/Training-app/static/media/slide3.f530cf3b14c86a35d2a3.jpg",
+    "static/media/logoblog.png": "/Training-app/static/media/logoblog.5377feb07a640dd14f0e.png",
+    "static/media/logo.svg": "/Training-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Training-app/index.html",
+    "main.c06770de.css.map": "/Training-app/static/css/main.c06770de.css.map",
+    "main.65cbac44.js.map": "/Training-app/static/js/main.65cbac44.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c06770de.css",
+    "static/js/main.65cbac44.js"
+  ]
+}
