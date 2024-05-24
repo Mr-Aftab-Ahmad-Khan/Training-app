@@ -1,0 +1,25 @@
+.headerInfo{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: #111;
+    color: white;
+    flex-wrap: wrap;
+}
+.headerInfo input{
+    margin-top: 1rem;
+    padding: 20px;
+    height: 30px;
+    width: 500px;
+    background-color: #307e6b;
+}
+.headerInfo input::placeholder{
+    color: white;
+
+}
+
+.social_icons{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
