@@ -1,13 +1,12 @@
 import React from "react";
 import Styles from "./HeaderInfo.module.css";
-import logo from "../../Assets/logoblog.png";
 import { Col, Container, Row, Carousel, Button, Nav } from "react-bootstrap";
 import HeaderCarousel from "./HeadCarousel";
 import { AiFillFacebook } from "react-icons/ai";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 
-import Navbar from "../Navbar/NavbarSection";
+import Navbar from "../Navbar/Navbar";
 
 const HeaderInfo = () => {
   return (
@@ -26,9 +25,9 @@ const HeaderInfo = () => {
         </span>
       </div>
       {/* =====================================================================Navbar */}
-      <Navbar />
+      
       {/* =====================================================================Carousel */}
-      <HeaderCarousel />
+      {/* <HeaderCarousel /> */}
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
-import slide from "../../Assets/slide1.jpg";
-import slide2 from "../../Assets/slide2.jpg";
-import slide3 from "../../Assets/slide3.jpg";
+import slide from "../../Assets/Pics/slide1.jpg";
+import slide2 from "../../Assets/Pics/slide2.jpg";
+import slide3 from "../../Assets/Pics/slide3.jpg";
 function HeaderCarousel() {
   return (
     <Carousel data-bs-theme="dark">

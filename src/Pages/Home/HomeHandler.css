@@ -1,0 +1,10 @@
+.container-fluid{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .carousel-control-prev-icon{
+    display: none;
+  }
+  .carousel-control-next-icon{
+    display: none;
+  }

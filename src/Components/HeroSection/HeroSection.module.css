@@ -1,0 +1,128 @@
+
+/* =============================================================Overlay Effects  */
+
+.bg {
+  background-image: url("../../Assets/Pics/bg.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Panels. */
+.splitview {
+    position: relative;
+    width: 100%;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+.panel {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+.panel .content {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    color: #FFF;
+    opacity: 1;
+    z-index: 2;
+}
+
+.panel .description {
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    opacity: 1;
+    z-index: 3;
+}
+
+.top {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(77, 69, 173, 0.5);
+    filter: blur(1px);
+    z-index: -1;
+    animation-name: dotune;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+    /* transition: all 1s ease-in-out; */
+}
+@keyframes dotune {
+        from {width: 0%;}
+        to   {width: 100%;}
+    }
+/* .splitview :hover.top::before{
+    width: 100%;
+}  */
+.top .description {
+    left: 5%;
+}
+
+/* Handle. */
+.handle {
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-color: rgb(253, 171, 0);
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+/* Skewed. */
+.skewed .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    transform-origin: top;
+}
+
+.skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content {
+    transform: skew(30deg);
+    margin-left: 0px;
+    z-index: 2;
+    animation-name: content;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    /* transition: all 1s ease-in-out; */
+}
+@keyframes content {
+    from{margin-left: 0px;}
+    to {margin-left: 1000px;}
+}
+/* .splitview:hover .content{
+    margin-left: 1000px;
+} */
+/* Responsive. */
+@media (max-width: 900px) {
+    body {
+        font-size: 75%;
+    }
+}
