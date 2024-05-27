@@ -1,77 +1,92 @@
-/* Basic styling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .brand a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-  
-  /* Hamburger menu styling */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.brand a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+/* Navigation links styling */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.navLinks li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 0.5rem 0;
+  text-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+.navLinks li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff9900;
+  transition: width 0.3s ease-in-out;
+}
+
+.navLinks li a:hover::before {
+  width: 100%;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
   .hamburger {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: white;
+    display: block;
   }
-  
-  /* Navigation links styling */
+
   .navLinks {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #1c1c1c;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in;
   }
-  
-  .navLinks li a {
-    color: white;
-    text-decoration: none;
+
+  .navLinks.open {
+    max-height: 300px; /* Adjust as necessary */
   }
-  
-  .navLinks li a:hover {
-    text-decoration: underline;
+
+  .navLinks li {
+    text-align: center;
+    padding: 1rem 0;
   }
-  
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block;
-    }
-  
-    .navLinks {
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #747272;
-      width: 100%;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in;
-    }
-  
-    .navLinks.open {
-      max-height: 300px; /* Adjust as necessary */
-    }
-  
-    .navLinks li {
-      text-align: center;
-      padding: 1rem 0;
-    }
-  }
-  
+}

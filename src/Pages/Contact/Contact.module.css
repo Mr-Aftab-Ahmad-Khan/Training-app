@@ -10,24 +10,24 @@
   background-size: cover;
   position: relative;
 }
-h1 {
+/* h1 {
   text-align: center;
   padding: 1rem;
-}
+} */
 /* ===================================== */
 .form_handler {
   margin-top: 10px;
   padding: 40px;
   border: 1px solid transparent;
   border-radius: 10px;
-  width: 600px;
+  /* width: 600px; */
   padding: 30px;
   z-index: 9999;
   box-shadow: -10px 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
-.form_handler input {
+/* rm_handler input {
   width: 300px;
-}
+} */
 .form_handler Label {
   font-size: 1rem;
   font-weight: 700;
@@ -38,6 +38,28 @@ h1 {
   background-color: antiquewhite;
   border-radius: 20px;
 }
+@media screen and (max-width: 768px) {
+  .contact_banner {
+  margin-top: 10rem;
+  padding: 0px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  }
+  .contact_banner img {
+  width: 300px;
+  height: 300px;
+  margin-left: .3rem !important;
+  margin-top: 10px !important;
+  border-radius: 50%;
+  background-color: #E3E3E3;
+  border-right: 1px solid black;
+  }
+  .contact_banner h2{
+    color: #FDAB00;
+    font-size: 2rem !important;
+    padding: 1rem;
+  }
+  }
 .contact_banner p {
   color: black;
   font-weight: 600;
@@ -58,4 +80,52 @@ h1 {
 }
 .padder{
     padding: 20px;
+}
+.contact_banner h2{
+  color: #FDAB00;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.connect_section{
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color:antiquewhite;
+  box-shadow: -10px -15px 10px 10px rgba(231, 144, 43, 0.5);
+}
+.connect_content{
+  text-align: center;
+  color: #FDAB00 !important;
+}
+.connect_icons p {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #FDAB00;
+}
+.connect_icons{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.call{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.address{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.mail{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.hours{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
