@@ -1,62 +1,65 @@
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-
-function ContactForm() {
-  return (
-    <Form>
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-      </Row>
-
-      <Form.Group className="mb-3" controlId="formGridAddress1">
-        <Form.Label>Address</Form.Label>
-        <Form.Control placeholder="1234 Main St" />
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>Address 2</Form.Label>
-        <Form.Control placeholder="Apartment, studio, or floor" />
-      </Form.Group>
-
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridCity">
-          <Form.Label>City</Form.Label>
-          <Form.Control />
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridState">
-          <Form.Label>State</Form.Label>
-          <Form.Select defaultValue="Choose...">
-            <option>Choose...</option>
-            <option>...</option>
-          </Form.Select>
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control />
-        </Form.Group>
-      </Row>
-
-      <Form.Group className="mb-3" id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
-  );
-}
+import React from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './ContactForm.css'; // Custom CSS file for additional styling
+import { IoHomeSharp } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
+const ContactForm = () => {
+    return (
+        <Container className="contact-container">
+            <Row className="contact-row">
+                <Col md={7} className="contact-form-section">
+                    <h3>Send us a message</h3>
+                    <Form>
+                        <Row>
+                            <Col md={6} className="mb-3">
+                                <Form.Group controlId="formName">
+                                    <Form.Label>Name *</Form.Label>
+                                    <Form.Control type="text" placeholder="Your name" />
+                                </Form.Group>
+                            </Col>
+                            <Col md={6} className="mb-3">
+                                <Form.Group controlId="formEmail">
+                                    <Form.Label>Email *</Form.Label>
+                                    <Form.Control type="email" placeholder="Your email" />
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={6} className="mb-3">
+                                <Form.Group controlId="formPhone">
+                                    <Form.Label>Phone</Form.Label>
+                                    <Form.Control type="text" placeholder="Phone #" />
+                                </Form.Group>
+                            </Col>
+                            <Col md={6} className="mb-3">
+                                <Form.Group controlId="formSubject">
+                                    <Form.Label>Subject</Form.Label>
+                                    <Form.Control type="text" placeholder="Subject" />
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        <Form.Group controlId="formMessage" className="mb-3">
+                            <Form.Label>Message *</Form.Label>
+                            <Form.Control as="textarea" rows={3} placeholder="Write your message" />
+                        </Form.Group>
+                        <Button variant="primary" type="submit" className="send-button">
+                            Send Message
+                        </Button>
+                    </Form>
+                </Col>
+                <Col md={5} className="contact-info-section">
+                    <h3>Contact Information</h3>
+                    <p>Need assistance?</p>
+                    <p>Our team is just a message away.</p>
+                    <p><strong><IoHomeSharp size={30}  /></strong> United Plaza Faisalabad - Sheikhupura - Lahore Road</p>
+                    <p><strong><FaPhoneAlt size={30} /></strong> +92 324 7730 410</p>
+                    <p><strong><IoMail size={30} /></strong> info@bzsoftech.com</p>
+                    </Col>
+            </Row>
+        </Container>
+    );
+};
 
 export default ContactForm;

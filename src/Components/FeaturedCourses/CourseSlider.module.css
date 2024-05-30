@@ -21,7 +21,7 @@
   transform: scale(1.05);
 }
 /* CourseDetail button */
-.courseDetail button {
+.courseDetail Link {
   margin-top: 1rem;
   padding: 0.3rem;
   width: 150px;
@@ -30,7 +30,7 @@
   border: 2px solid peru;
   transition: all 0.3s ease-in-out;
 }
-.courseDetail button:hover {
+.courseDetail Link:hover {
   color: white;
   background-color: peru;
 }

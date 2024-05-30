@@ -1,0 +1,53 @@
+.adjuster{
+    margin-left: 200px !important;
+}
+.borderLine{
+ border-bottom: 1px solid red;
+ width: 70%;
+font-size: x-large;
+margin-left: 10px;
+}
+.course_img img {
+    display: block; /* Ensure the image is a block-level element */
+    width: 100%; /* Take full width of the parent element */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the parent area without stretching */
+    margin-top: 3rem;
+}
+
+.featuresList > ul {
+    padding: 0px;
+}
+.featuresList {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 17px !important;
+    line-height: 32px;   
+    list-style: none;
+    padding-left: 0;
+}
+.fontSizer{
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 13px !important;
+    line-height: 22px;   
+}
+.heading{
+    margin-top: -1px;
+    border-bottom: 2px solid grey;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px !important;
+    line-height: 22px;
+    color: rgb(68, 68, 68);
+}
+.underborder{
+    padding-bottom: 0.8rem;
+    max-width: 300px;
+    border-bottom: 2px solid red;
+}
+.headingLine{
+    margin-top: -10px;
+    background-color: grey;
+    outline: 0px solid transparent;
+}

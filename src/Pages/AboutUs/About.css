@@ -1,0 +1,167 @@
+/* About Header */
+.about-header {
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    background: url('') orange; /* Add your background image if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* After Header */
+.after-header {
+    margin-top: 2rem;
+    box-shadow: 10px 10px 10px 10px rgba(255, 255, 255, 0.9);
+    padding: 2rem 0;
+    text-align: justify;
+}
+
+.about-image {
+    width: 100%;
+    border: 1px solid orange;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Card */
+ .our-trainers{
+    text-align: center;
+    /* padding: .5rem; */
+} 
+
+.team-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    position: relative;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+.team-image {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: auto;
+}
+
+/* Portfolio */
+
+.our-portfolio >:nth-child(1){
+    text-align: center;
+    color: black;
+    padding: 2rem;
+}
+.portfolio-main {
+    max-width: 90%;
+    margin: auto;
+    background-color: #ffe5b4; /* Faded orange background color */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.portfolio-row {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.portfolio-column-image {
+    flex: 1;
+}
+
+.portfolio-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-column-content {
+    flex: 2;
+    padding-left: 20px;
+    color: #333;
+    position: relative;
+}
+
+.portfolio-column-content h3 {
+    color: #ff9900; /* Orange color for the title */
+}
+
+.portfolio-column-content p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.portfolio-column-content::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+@media screen and (max-width: 900px) {
+    .portfolio-row {
+        flex-direction: column;
+    }
+
+    .portfolio-column-content {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
+
+/* Tuition View */
+.tuition-view {
+    padding: 20px;
+    max-width: 100%;
+}
+
+.students-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card {
+    border: none;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-text h5 {
+    color: #ff9900;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .students-image {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,47 @@
+.expertise_container {
+    position: relative;
+    width: 100%;
+}
+
+.expertise_img {
+    margin: 0rem 1rem;
+    background-color: #440315;
+    width: 90%;
+
+    height: 180px;
+}
+
+.expertise_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 0;
+    background-color: #58071efd;
+    overflow: hidden;
+    width: 0%;
+    height: 100%;
+    opacity: .3;
+    transition: all .3s ease-in-out;
+}
+
+
+.expertise_container:hover .expertise_overlay {
+    left: 2%;
+    width: 50%;
+    opacity: 1;
+
+}
+
+.expertise_text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    text-align: center;
+    z-index: 1;
+}
+.expertise_container:hover .changes {
+    color: white !important;
+    transition: all .3s ease-in-out;
+}

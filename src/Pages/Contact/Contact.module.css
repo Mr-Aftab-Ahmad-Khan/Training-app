@@ -1,15 +1,15 @@
-.bg_wrapper {
-  /* The image used */
+/* .bg_wrapper {
+  The image used
   background-image: url("../../Assets/Pics/contact.jpeg");
 
   min-height: 60vh;
 
-  /* Center and scale the image nicely */
+  Center and scale the image nicely
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
+} */
 /* h1 {
   text-align: center;
   padding: 1rem;

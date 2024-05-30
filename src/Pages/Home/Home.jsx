@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import HeroSection from "../../Components/HeroSection/HeroSection";
 import { Container, Row, Col } from "react-bootstrap";
 import Styles from "../../Styles/Home.module.css";
@@ -13,12 +13,59 @@ import { FaLeaf } from "react-icons/fa";
 import { FaAnchor } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdClock } from "react-icons/io";
-import { FaQuoteLeft } from "react-icons/fa";
-import { FaQuoteRight } from "react-icons/fa";
 import img from "../../Assets/Pics/slide1.jpg";
 import { Link } from "react-router-dom";
 import Services from "../../Components/Services/Services";
+import Testimonial from "../../Components/Testimonial/Testimonial";
+
+import Detail from "../../Components/Detail/Detail";
 const Home = () => {
+  // Set the count state for keep counting
+  const [aluminiCount, setaluminiCount] = useState(1);
+  const [programCount, setProgramCount] = useState(1);
+  const [affiliations, setAffiliations] = useState(1);
+  const [campuses, setCampuses] = useState(1);
+  // will chnage the number without requiring rendering and as well termination
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      //Alumini Count
+      setaluminiCount((aCount) => {
+        if (aCount >= 150) {
+          clearInterval(intervalId);
+          return 150; //
+        } else {
+          return aCount + 1;
+        }
+      });
+      //program Count
+      setProgramCount((pCount) => {
+        if (pCount >= 20) {
+          return 20; //
+        } else {
+          return pCount + 1;
+        }
+      });
+      //Affiliations Count
+      setAffiliations((e) => {
+        if (e >= 50) {
+          return 50; //
+        } else {
+          return e + 1;
+        }
+      });
+      //campuses Count
+      setCampuses((c) => {
+        if (c >= 40) {
+          return 40; //
+        } else {
+          return c + 1;
+        }
+      });
+    }, 100);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div>
       {/* ==============================Hero Section  */}
@@ -27,23 +74,23 @@ const Home = () => {
       <section className={Styles.aluminiContainer}>
         <div md={3} className={Styles.aluminiCard}>
           <SiGooglescholar size={50} />
-          <h1>150</h1>
+          <h1>{aluminiCount}</h1>
           <h4>Alumni</h4>
         </div>
         <div md={3} className={Styles.aluminiCard}>
           <FaPeopleRoof size={50} />
-          <h1>150</h1>
-          <h4>Alumni</h4>
+          <h1>{programCount}+</h1>
+          <h4>Program</h4>
         </div>
         <div md={3} className={Styles.aluminiCard}>
           <GiTeacher size={50} />
-          <h1>150</h1>
-          <h4>Alumni</h4>
+          <h1>{affiliations}</h1>
+          <h4>Affiliations</h4>
         </div>
         <div md={3} className={Styles.aluminiCard}>
           <HiMiniBuildingLibrary size={50} />
-          <h1>150</h1>
-          <h4>Alumni</h4>
+          <h1>{campuses}</h1>
+          <h4>Incubator</h4>
         </div>
       </section>
       {/* ========================================Event */}
@@ -138,30 +185,7 @@ const Home = () => {
       {/* =================================================Parallax */}
       <div className={Styles.parallax}></div>
       {/* =================================================Testimonial */}
-      <section className={Styles.testimonial_container}>
-        <div className={Styles.progress_bar} />
-
-        <p className={Styles.testimonial}>
-        <FaQuoteLeft />
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
-          repellendus, vitae suscipit culpa molestiae possimus voluptate
-          consequuntur odit nulla saepe obcaecati dolorem laudantium praesentium
-          aspernatur mollitia aperiam laborum rem cum commodi doloremque
-          asperiores officia hic similique. Sint ad nobis quos? 
-        <FaQuoteRight />
-        </p>
-        <div className={Styles.user}>
-          <img
-            src="https://randomuser.me/api/portraits/women/46.jpg"
-            alt="user"
-            className={Styles.user_image}
-          />
-          <div className={Styles.user_details}>
-            <h4 className={Styles.username}>Lola Smith</h4>
-            <p className={Styles.role}>Marketing</p>
-          </div>
-        </div>
-      </section>
+      <Testimonial />
     </div>
   );
 };

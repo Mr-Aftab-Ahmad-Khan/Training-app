@@ -1,31 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import Styles from'./NavBar.module.css';
 import { Link } from 'react-router-dom';
-import { FaBars } from "react-icons/fa";
-import Styles from './NavBar.module.css';
 
-const NavbarSection = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+const ModernNavbar = () => {
   return (
-    <nav className={Styles.navbar}>
-    <div className={Styles.brand}>
-      <Link to="/">BZ Soft Tech</Link>
-    </div>
-    <div className={Styles.hamburger} onClick={toggleMenu}>
-    <FaBars />
-    </div>
-    <ul className={`${Styles.navLinks} ${isOpen ? Styles.open : ''}`}>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/services">Services</Link></li>
-      <li><Link to="/contact">Contact</Link></li>
-    </ul>
-  </nav>
+    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+      <Container>
+        <Navbar.Brand to="/">BZ Soft Tech</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="custom-toggler" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Link to="/" className={Styles.nav_link}>Home</Link>
+            <Link to="Courses" className={Styles.nav_link}>Courses</Link>
+            <Link to="/Blog" className={Styles.nav_link}>Latest Blog</Link>
+            <Link to="/about" className={Styles.nav_link}>About</Link>
+            <Link to="/ContactUs" className={Styles.nav_link}>Contact</Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default NavbarSection;
+export default ModernNavbar;

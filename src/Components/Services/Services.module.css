@@ -13,18 +13,25 @@
   .features_cards {
     background-color: #FDAB00;
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    width: 99vw; /* Added */
-    margin-left: calc(-50vw + 50%); /* Added */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted */
+    gap: 15px; /* Adjusted */
+    padding: 15px; /* Adjusted */
+    width: 99vw; /* Ensures the container spans the full viewport width */
+    margin-left: calc(-50vw + 50%); /* Centers the container */
   }
+  
   @media (max-width: 992px) {
     .features_cards {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout on smaller screens */
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted for smaller screens */
     }
   }
   
+  @media (max-width: 600px) {
+    .features_cards {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Further adjustments for very small screens */
+    }
+  }
+    
   .feature_card {
     background-color: #fff;
     border-radius: 10px;
