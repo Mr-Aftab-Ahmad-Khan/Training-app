@@ -11,15 +11,17 @@ import ContactForm from "../../Components/ContactForm/ContactForm";
 const ContactUs = () => {
   return (
     <div className={Styles.bg_wrapper}>
-      <h1>Contact Us</h1>
-     <ContactForm/>
+      <section className={Styles.contact_header}>
+        <h1>Contact Us</h1>
+      </section>
+      <ContactForm />
 
       <Container className={Styles.contact_banner}>
         <Row>
-          <Col md={4} className={Styles.padder}>
+          <Col lg={4} >
             <img src={Avatar} alt="" />
           </Col>
-          <Col md={6}>
+          <Col lg={6} className={Styles.padder}>
             <p>
               WE REALIZE THAT YOU LEAD A BUSY LIFE, SO WE HAVE MADE IT EASY FOR
               YOU TO DROP OFF YOUR VEHICLE 24/7.
@@ -32,13 +34,13 @@ const ContactUs = () => {
       </Container>
 
       <Container fluid className={Styles.connect_section}>
- <div className={Styles.connect_content}>
-        <h1>More Way to Connect</h1>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident. Image from
-        </p>
+        <div className={Styles.connect_content}>
+          <h1>More Way to Connect</h1>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident. Image from
+          </p>
         </div>
         <div className={Styles.connect_icons}>
           <span className={Styles.call}>

@@ -1,8 +1,8 @@
 /* Contact Us Container */
 .contact-container {
-    background-color: #ffe5b4; /* Faded orange background color */
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: -10px -15px 10px 10px rgba(231, 144, 43, 0.5); */
+    box-shadow: 10px 10px 40px 15px rgba(160, 10, 173, 0.2);
     padding: 20px;
     max-width: 100%;
     margin: auto;
@@ -43,7 +43,7 @@
 
 /* Info Section */
 .contact-info-section {
-    background-color: #ff9900; /* Orange shade */
+    background-color: var(--primary); /* Orange shade */
     color: white;
     border-radius: 15px;
     padding: 20px;

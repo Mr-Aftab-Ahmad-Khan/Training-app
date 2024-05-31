@@ -42,7 +42,7 @@ const courses = [
     'Desc':'Investociety is a global community for investors as their name suggests. Join this community of investors and be part of the community! Engage with your friends and with other investors, discuss stocks and your investments, inform yourself about stocks, read news about stocks and discover new stocks and trading strategies',
     'Category': "Web",
     'duration': "6 Weeks",
-    'enviroment': "On Premsis",
+    'enviroment': "Online",
   },
 ];
 

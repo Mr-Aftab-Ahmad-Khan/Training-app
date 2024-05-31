@@ -1,0 +1,32 @@
+.pading_above{
+    padding-top:2.5rem;
+    color: var(--text-color);
+}
+
+.recentImg{
+    max-width: 100%;
+    /* width: 300px; */
+}
+.content{
+    padding:2rem 0rem;
+}
+@media screen and (min-width: 768px) {
+.content{
+    padding-top:0rem;
+    color: var(--text-color);
+}
+}
+.posts{
+    padding:.1rem 0rem;
+    width: auto;
+    /* gap: 1rem; */
+}
+.recent_posts{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.blog_button{
+    text-decoration: none;
+    color: var(--text-color);
+    border-bottom: .5px solid #FFC107;
+}

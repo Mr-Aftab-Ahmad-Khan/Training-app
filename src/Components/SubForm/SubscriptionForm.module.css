@@ -1,0 +1,18 @@
+.subscription_form_container {
+    padding: 50px 10px;
+  }
+  
+  .subscription_img {
+    width: 100px;
+    margin: auto;
+  }
+  
+  .subscription_form_container h2 {
+    font-weight: bold;
+  }
+  
+  .subscription_form_container .form-control {
+    flex: 1;
+    padding: .3rem
+  }
+  

@@ -17,6 +17,7 @@ import BlogPage from "./Pages/BLogPage/BlogPage";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Footer from "./Components/Footer/Footer";
 import Detail from "./Components/Detail/Detail";
+import LoginForm from "./Components/LoginForm/LoginForm";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/About" element={<AboutUs/>} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Detail/:courseId" element={<Detail />} />
+          <Route path="/Login" element={<LoginForm />} />
         </Routes>
           <Footer/>
       </Router>

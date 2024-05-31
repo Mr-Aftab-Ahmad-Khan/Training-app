@@ -30,6 +30,26 @@ function Testimonial() {
                 delay: 2500,
                 disableOnInteraction: false,
               }}
+              responsive={[
+                {
+                  breakpoint: 1024,
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  infinite: true,
+                  dots: true,
+                },
+                {
+                  breakpoint: 600,
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  initialSlide: 1,
+                },
+                {
+                  breakpoint: 480,
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                },
+              ]}
               coverflowEffect={{
                 rotate: 50,
                 stretch: 0,
@@ -48,10 +68,7 @@ function Testimonial() {
                       <FaQuoteLeft />
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Quia repellendus, vitae suscipit culpa molestiae possimus
-                      voluptate consequuntur odit nulla saepe obcaecati dolorem
-                      laudantium praesentium aspernatur mollitia aperiam laborum
-                      rem cum commodi doloremque asperiores officia hic
-                      similique. Sint ad nobis quos?
+                      voluptate consequuntur
                       <FaQuoteRight />
                     </p>
                     <div className={Styles.user}>

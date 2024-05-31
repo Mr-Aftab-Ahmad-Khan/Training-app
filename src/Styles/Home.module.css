@@ -5,7 +5,7 @@
   overflow: hidden;
   gap: 0.5rem;
   flex-wrap: wrap;
-  background-color: beige;
+  background-color: var(--primary);
   box-shadow: 4px 4px 20px 0px rgba(223, 222, 221, 0.699);
   padding: 2rem;
 }
@@ -15,9 +15,10 @@
   padding: 40px 60px;
   text-align: center;
   border-radius: 10px;
-  background: #fdab00;
-  box-shadow: 4px 4px 20px 0px rgba(239, 89, 34, 0.25);
+  background: var(--primary);
+  box-shadow: 4px 4px 20px 0px rgba(207, 13, 133, 0.25);
   transition: all 0.3s ease-in-out;
+  color: #D47E1D;
 }
 .aluminiCard h1 {
   color: white;
@@ -39,15 +40,15 @@
 }
 .event_date h1 {
   font-size: 4rem;
-  color: #d4a017;
+  color: var(--primary);
 }
 .event_date p {
   margin: 0;
-  color: #d4a017;
+  color: var(--primary);
 }
 .event_details {
-  background-color: #00274d;
-  color: white;
+  background-color:var(--primary);
+  color: var(--text-color);
   padding: 20px;
 }
 .event_details h5 {
@@ -79,11 +80,13 @@
 }
 .content {
   /* gap: 3rem; */
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .excellence_Wrapper {
-  background-color: #fdab00;
-  padding: 10px;
+  background-color: var(--primary);
+  color: var(--text-color);
+  padding: 30px;
+  /* padding-bottom: 10px; */
 }
 /* ===========================================================Paralax */
 .parallax {

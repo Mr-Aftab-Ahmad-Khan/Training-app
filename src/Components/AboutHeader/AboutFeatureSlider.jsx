@@ -6,7 +6,7 @@ import { GrDocumentPerformance } from "react-icons/gr";
 import { GrAchievement } from "react-icons/gr";
 import { GiTechnoHeart } from "react-icons/gi";
 import { GiStairsGoal } from "react-icons/gi";
-
+import SubscriptionForm from '../SubForm/SubscriptionForm'
 
 function AboutFeatureSlider() {
     const settings = {
@@ -88,6 +88,8 @@ function AboutFeatureSlider() {
                         </div>
 
             </Slider>
+      <SubscriptionForm/>
+
         </div>
     );
 }

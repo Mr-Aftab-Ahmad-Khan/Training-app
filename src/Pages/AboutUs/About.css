@@ -3,12 +3,12 @@
     height: 300px;
     width: 100%;
     text-align: center;
-    background: url('') orange; /* Add your background image if needed */
+    background: var(--primary); /* Add your background image if needed */
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: underline;
-    color: white;
+    color: var(--text-color);
     font-size: 2rem;
     font-weight: bold;
 }
@@ -31,6 +31,9 @@
 /* Team Card */
  .our-trainers{
     text-align: center;
+    padding: 2rem;
+    color: var(--text-color);
+    background-color: var(--primary);
     /* padding: .5rem; */
 } 
 

@@ -1,33 +1,26 @@
-/* .bg_wrapper {
-  The image used
-  background-image: url("../../Assets/Pics/contact.jpeg");
-
-  min-height: 60vh;
-
-  Center and scale the image nicely
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-} */
-/* h1 {
+.contact_header {
+  height: 300px;
+  width: 100%;
   text-align: center;
-  padding: 1rem;
-} */
+  background: var(--primary); /* Add your background image if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
 /* ===================================== */
 .form_handler {
   margin-top: 10px;
   padding: 40px;
   border: 1px solid transparent;
   border-radius: 10px;
-  /* width: 600px; */
   padding: 30px;
   z-index: 9999;
   box-shadow: -10px 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
-/* rm_handler input {
-  width: 300px;
-} */
 .form_handler Label {
   font-size: 1rem;
   font-weight: 700;
@@ -35,96 +28,125 @@
 .contact_banner {
   margin-top: 10rem;
   padding: 2rem;
-  background-color: antiquewhite;
+  padding-left: 3rem;
+  background-color: var(--primary);
   border-radius: 20px;
+  color: var(--text-color);
+}
+@media screen and (min-width: 1024px) {
+  .contact_banner p,h2 {
+    padding-left: 60px !important; /* Kept the left padding */
+  }
 }
 @media screen and (max-width: 768px) {
   .contact_banner {
-  margin-top: 10rem;
-  padding: 0px;
-  background-color: antiquewhite;
-  border-radius: 20px;
+    margin-top: 10rem;
+    padding: 2rem;
+    background-color: var(--primary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .contact_banner img {
-  width: 300px;
-  height: 300px;
-  margin-left: .3rem !important;
-  margin-top: 10px !important;
-  border-radius: 50%;
-  background-color: #E3E3E3;
-  border-right: 1px solid black;
+    width: 300px;
+    height: 300px;
+    margin-left: 30% !important;
+    margin-top: 10px !important;
+    border-radius: 50%;
+    background-color: var(--primary);
+    border-right: 1px solid black;
   }
-  .contact_banner h2{
-    color: #FDAB00;
+  .contact_banner h2 {
+    color: #fdab00;
     font-size: 2rem !important;
     padding: 1rem;
+    text-align: center;
   }
+}
+@media screen and (max-width: 425px) {
+  .contact_banner img {
+    width: 200px;
+    height: 200px;
+    margin-left: 0 !important;
+    margin-top: 10px !important;
+    border-radius: 50%;
+    background-color: var(--primary);
+    border-right: 1px solid black;
   }
+}
+
 .contact_banner p {
-  color: black;
+  color: var(--text-color);
   font-weight: 600;
   font-size: larger;
   text-align: center;
   padding-top: 5rem;
 }
-.contact_banner h2{
-    text-align: center;
+.contact_banner h2 {
+  text-align: center;
 }
 .contact_banner img {
   width: 300px;
   height: 300px;
   margin-left: 70px;
   border-radius: 50%;
-  background-color: #E3E3E3;
+  background-color: #e3e3e3;
   border-right: 1px solid black;
 }
-.padder{
-    padding: 20px;
+.padder {
+  padding: 20px;
 }
-.contact_banner h2{
-  color: #FDAB00;
+@media screen and (max-width: 768px) {
+  .padder {
+    padding: 20px;
+  }
+}
+.contact_banner h2 {
+  color: #fdab00;
   font-size: 2.5rem;
   padding: 1rem;
 }
 
-.connect_section{
+.connect_section {
   margin-top: 5rem;
   padding: 2rem;
-  background-color:antiquewhite;
+  background-color: var(--primary);
   box-shadow: -10px -15px 10px 10px rgba(231, 144, 43, 0.5);
 }
-.connect_content{
+.connect_content {
   text-align: center;
-  color: #FDAB00 !important;
+  color: var(--text-color) !important;
 }
 .connect_icons p {
   text-align: center;
   justify-content: center;
   align-items: center;
-  color: #FDAB00;
+  color: var(--text-color);
 }
-.connect_icons{
+.connect_icons {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
+  color: #fdab00;
 }
-.call{
+.call {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.address{
+.address {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.mail{
+.mail {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.hours{
+.hours {
   display: flex;
   flex-direction: column;
   text-align: center;
