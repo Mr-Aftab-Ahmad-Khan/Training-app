@@ -20,10 +20,11 @@
     padding: 2rem 0;
     text-align: justify;
 }
-
-.about-image {
+.after-header p{
+    line-height: 2.2rem;
+}
+.afterHead_img {
     width: 100%;
-    border: 1px solid orange;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -99,7 +100,7 @@
 }
 
 .portfolio-column-content h3 {
-    color: #ff9900; /* Orange color for the title */
+    color: var(--text-color); /* Orange color for the title */
 }
 
 .portfolio-column-content p {
@@ -135,12 +136,28 @@
 .tuition-view {
     padding: 20px;
     max-width: 100%;
+    color: var(--primary);
 }
 
-.students-image {
+.tuition-card p {
+    color: var(--heading);
+}
+
+.tuition-card:nth-child(1) {
+    color: black;
+}
+
+.image-container {
+    position: relative;
+    padding: 0;
+    height: 100%;
+}
+
+.image-container .mission-image {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0; /* Remove border radius if not needed */
 }
 
 .card {
@@ -153,7 +170,7 @@
 }
 
 .card-text h5 {
-    color: #ff9900;
+    color: var(--text-color);
     font-size: 1.5rem;
     margin-top: 1rem;
 }
@@ -164,7 +181,12 @@
 }
 
 @media (max-width: 768px) {
-    .students-image {
+    .image-container {
         margin-bottom: 20px;
+        height: auto;
+    }
+
+    .tuition-card {
+        text-align: center;
     }
 }

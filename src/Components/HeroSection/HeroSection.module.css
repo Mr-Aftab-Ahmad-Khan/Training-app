@@ -69,21 +69,21 @@
 }
 
 .slide_1 {
-  background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../../Assets/Pics/homeSlide1.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .slide_2 {
-  background-image: url("https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../../Assets/Pics/homeSlide2.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .slide_3 {
-  background-image: url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../../Assets/Pics/homeSlide3.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -139,7 +139,7 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: rgba(77, 69, 173, 0.5);
+  background-color: #1eb4b67c;
   filter: blur(1px);
   z-index: -1;
   animation-name: dotune;
@@ -168,7 +168,7 @@
   height: 100%;
   position: absolute;
   display: block;
-  background-color: rgb(253, 171, 0);
+  background-color:var(--primary);
   width: 5px;
   top: 0;
   left: 50%;

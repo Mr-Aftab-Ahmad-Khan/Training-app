@@ -18,8 +18,8 @@ const SubscriptionForm = () => {
           </Card>
         </Col>
         <Col md={4}>
-          <h2>Subscribe to our Newsletter!</h2>
-          <p>Subscribe to our newsletter and stay updated.</p>
+          <h2>Get Connected To US!</h2>
+          <p>Ask For Qoute</p>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -30,7 +30,7 @@ const SubscriptionForm = () => {
                   className="me-2"
                 />
                 <Button variant="primary" type="submit">
-                  Subscribe
+                  Send
                 </Button>
               </div>
             </Form.Group>

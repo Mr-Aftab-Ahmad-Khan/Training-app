@@ -12,16 +12,6 @@ const Services = () => {
     <div className={Styles.features_container}>
       <h2>Our Features & Services</h2>
       <div className={Styles.features_cards}>
-      
-      
-        <div className={Styles.feature_card}>
-          <img src={service_2} alt="/" className={Styles.feature_image} />
-          <h3>SEO Optimization</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, et!
-          </p>
-          <button className={Styles.more_button}>More</button>
-        </div>
         <div className={Styles.feature_card}>
           <img src={service_3} alt="/" className={Styles.feature_image} />
           <h3>CRM</h3>

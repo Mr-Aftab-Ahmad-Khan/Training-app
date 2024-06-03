@@ -1,35 +1,31 @@
 .expertise_container {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 .expertise_img {
     margin: 0rem 1rem;
-    background-color: #440315;
-    width: 90%;
-
+    background-color: var(--primary);
+    width: 100%;
     height: 180px;
+    position: relative; /* Add this to make the overlay position relative to this div */
 }
 
 .expertise_overlay {
     position: absolute;
     bottom: 0;
-    left: 10%;
-    right: 0;
-    background-color: #58071efd;
-    overflow: hidden;
-    width: 0%;
+    left: 0; /* Start from the left edge */
+    background-color: #648686c9;
+    width: 0%; /* Initial width */
     height: 100%;
-    opacity: .3;
-    transition: all .3s ease-in-out;
+    opacity: 0.3;
+    transition: width 0.3s ease-in-out;
 }
 
-
 .expertise_container:hover .expertise_overlay {
-    left: 2%;
-    width: 50%;
+    width: 50%; /* End up at 50% width */
     opacity: 1;
-
 }
 
 .expertise_text {
@@ -37,11 +33,13 @@
     font-size: 20px;
     position: absolute;
     top: 30%;
-    left: 38%;
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
     text-align: center;
     z-index: 1;
 }
+
 .expertise_container:hover .changes {
     color: white !important;
-    transition: all .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }

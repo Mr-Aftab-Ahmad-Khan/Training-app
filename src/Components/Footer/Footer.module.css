@@ -1,0 +1,112 @@
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.company_info,
+.about,
+.follow_us,
+.opening_hours {
+  width: calc(25% - 1rem);
+  margin-bottom: 2rem;
+}
+
+.company_info h3,
+.about h3,
+.follow_us h3,
+.opening_hours h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.opening_hours table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.opening_hours td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #555;
+}
+
+.opening_hours td:first-child {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.opening_hours td:last-child {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .footer_content {
+    flex-direction: column;
+  }
+
+  .company_info,
+  .about,
+  .follow_us,
+  .opening_hours {
+    width: 100%;
+  }
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer_content div {
+  width: calc(25% - 1rem);
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #555;
+}
+
+td:first-child {
+  /* font-weight: bold; */
+  text-transform: capitalize;
+}
+
+td:first-child svg {
+  margin-right: 0.5rem;
+  /* vertical-align: middle; */
+}
+
+@media (max-width: 768px) {
+  .footer_content {
+    flex-direction: column;
+  }
+
+  .footer_content div {
+    width: 100%;
+  }
+}

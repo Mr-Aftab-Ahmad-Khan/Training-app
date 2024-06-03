@@ -3,7 +3,7 @@
     border-radius: 15px;
     /* box-shadow: -10px -15px 10px 10px rgba(231, 144, 43, 0.5); */
     box-shadow: 10px 10px 40px 15px rgba(160, 10, 173, 0.2);
-    padding: 20px;
+    /* padding: 20px; */
     max-width: 100%;
     margin: auto;
     margin-top: 2rem;
@@ -20,7 +20,9 @@
 .contact-form-section {
     background-color: #ffffff; /* Off-white background */
     border-radius: 15px;
-    padding: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex: 2;
     color: #333;
@@ -28,7 +30,7 @@
 }
 
 .contact-form-section h3 {
-    color: #ff9900; /* Orange color */
+    color: var(--text-color); /* Orange color */
     margin-bottom: 20px;
 }
 
@@ -46,6 +48,9 @@
     background-color: var(--primary); /* Orange shade */
     color: white;
     border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    /* padding: 10px; */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex: 1;
@@ -61,7 +66,7 @@
 
 /* Send Button */
 .send-button {
-    background-color: #ff9900;
+    background-color: var(--text-color);
     border: none;
     color: white;
     font-weight: bold;

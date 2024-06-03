@@ -44,6 +44,15 @@ const courses = [
     'duration': "6 Weeks",
     'enviroment': "Online",
   },
+  {
+    'id': "5",
+    'img': "https://career.edu.pk/storage/websiteadmin/MERN.jpg",
+    'title': "Web Dev",
+    'Desc':'Investociety is a global community for investors as their name suggests. Join this community of investors and be part of the community! Engage with your friends and with other investors, discuss stocks and your investments, inform yourself about stocks, read news about stocks and discover new stocks and trading strategies',
+    'Category': "Web",
+    'duration': "6 Weeks",
+    'enviroment': "Online",
+  },
 ];
 
 export default courses;

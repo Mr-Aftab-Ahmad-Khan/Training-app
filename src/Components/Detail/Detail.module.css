@@ -1,5 +1,5 @@
-.adjuster{
-    margin-left: 200px !important;
+.more_course{
+margin-top: 3rem;    
 }
 .borderLine{
  border-bottom: 1px solid red;
@@ -45,6 +45,7 @@ margin-left: 10px;
     padding-bottom: 0.8rem;
     max-width: 300px;
     border-bottom: 2px solid red;
+    padding-left: 0 !important;
 }
 .headingLine{
     margin-top: -10px;

@@ -13,12 +13,15 @@ import { FaLeaf } from "react-icons/fa";
 import { FaAnchor } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdClock } from "react-icons/io";
-import img from "../../Assets/Pics/slide1.jpg";
+import homeMotiveImg from "../../Assets/Pics/homeMotive.jpeg";
 import { Link } from "react-router-dom";
 import Services from "../../Components/Services/Services";
 import Testimonial from "../../Components/Testimonial/Testimonial";
-
+import HomeTrainer from '../../Components/HomeTrainer/HomeTrainer'
 import Detail from "../../Components/Detail/Detail";
+import CourseSlider from "../../Components/FeaturedCourses/CourseSlider";
+import SubscriptionForm from "../../Components/SubForm/SubscriptionForm";
+
 const Home = () => {
   // Set the count state for keep counting
   const [aluminiCount, setaluminiCount] = useState(1);
@@ -96,96 +99,120 @@ const Home = () => {
       {/* ========================================Event */}
       <Container className={Styles.event_container}>
         <h1>Upcoming Events</h1>
-        <Row>
+        <Row className={Styles.event_card}  > 
           <Col md={3} className={Styles.event_date}>
-            <div className="mb-2">
-              <IoMdClock /> 10 am - 11 am
-            </div>
-            <div>
-              <FaLocationDot /> VENICE, India
-            </div>
-            <h1>25</h1>
-            <p>June</p>
+            <h4><IoMdClock color="#149092"/> 25 June</h4>
           </Col>
           <Col md={6} className={Styles.event_details}>
             <h5>Summer School 2018.</h5>
-            <p>
-              Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim aquis
-              Lorem ipsum dolor sit amet, tetur adipiscing elit, sed do eiusmod
-              tempor.
-            </p>
             <a to="/" className={Styles.more_link}>
               More &gt;
             </a>
           </Col>
-          <Col md={3}>
-            <img
-              src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D"
-              className={Styles.img_fluid}
-              alt="Event Image"
-            />
+          <Col md={3} className={Styles.event_date}>
+          <h4><FaLocationDot color="#149092"/> Venice India</h4>
+          </Col>
+        </Row>
+        <Row className={Styles.event_card}>
+          <Col md={3} className={Styles.event_date}>
+            <h4><IoMdClock color="#149092"/> 25 June</h4>
+          </Col>
+          <Col md={6} className={Styles.event_details}>
+            <h5>Summer School 2018.</h5>
+            <a to="/" className={Styles.more_link}>
+              More &gt;
+            </a>
+          </Col>
+          <Col md={3} className={Styles.event_date}>
+          <h4><FaLocationDot color="#149092"/> Venice India</h4>
+          </Col>
+        </Row>
+        <Row className={Styles.event_card}>
+          <Col md={3} className={Styles.event_date}>
+            {/* <h1>25</h1> */}
+            <h4><IoMdClock color="#149092"/> 25 June</h4>
+          </Col>
+          <Col md={6} className={Styles.event_details}>
+            <h5>Summer School 2018.</h5>
+            <a to="/" className={Styles.more_link}>
+              More &gt;
+            </a>
+          </Col>
+          <Col md={3} className={Styles.event_date}>
+          <h4><FaLocationDot color="#149092"/> Venice India</h4>
           </Col>
         </Row>
       </Container>
+      {/* ========================================Courses */}
 
+      <section className={Styles.home_courses}>
+      <div className={Styles.heading_wrapper}>
+        <h1>Our Courses</h1>
+      </div>
+      <CourseSlider />
+    </section>
       {/* =======================================Excellence */}
       <section className={Styles.excellence_Wrapper}>
-        <Container className={`${Styles.excellence} ${Styles.content}`}>
-          <Row>
+      <Container className={`${Styles.excellence} ${Styles.content}`}>
+        <Row>
+          <Col md={6} className={Styles.text_col}>
             <h1>Our Motive</h1>
-            <Col md={6}>
-              <Row className={Styles.content}>
-                <Col md={6}>
-                  <FaLeaf size={30} />
-                  <h4>QUALITY PRODUCTS</h4>
-                  <p>
-                    We believe in Software Quality that is essential to deliver
-                    the product on time and on the required quality.
-                  </p>
-                </Col>
-                <Col md={6}>
-                  <GoClockFill size={30} />
-                  <h4>TIMELY WORK</h4>
-                  <p>
-                    We always plan the Project Development schedule for
-                    deploying the Project on time with all completed
-                    requirements.
-                  </p>
-                </Col>
-              </Row>
-              <Row>
-                <Col md={6}>
-                  <TfiWorld size={30} />
-                  <h4>RELIABILITY</h4>
-                  <p>
-                    Failure Free Products are our main target.We always develope
-                    the most reliable Products without any failure issue on
-                    future.
-                  </p>
-                </Col>
-                <Col md={6}>
-                  <FaAnchor size={30} />
-                  <h4>MAINTAINABLE</h4>
-                  <p>
-                    Our Products are fully maintainable for the injection of any
-                    new Functionality or Requirement.
-                  </p>
-                </Col>
-              </Row>
-            </Col>
-            <Col md={6}>
-              <img src={img} alt="" className={Styles.motive_img} />
-            </Col>
-          </Row>
-        </Container>
-      </section>
+            <Row className={Styles.content}>
+              <Col md={6}>
+                <FaLeaf size={30} />
+                <h4>QUALITY PRODUCTS</h4>
+                <p>
+                  We believe in Software Quality that is essential to deliver
+                  the product on time and on the required quality.
+                </p>
+              </Col>
+              <Col md={6}>
+                <GoClockFill size={30} />
+                <h4>TIMELY WORK</h4>
+                <p>
+                  We always plan the Project Development schedule for deploying
+                  the Project on time with all completed requirements.
+                </p>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <TfiWorld size={30} />
+                <h4>RELIABILITY</h4>
+                <p>
+                  Failure Free Products are our main target. We always develop
+                  the most reliable Products without any failure issue in
+                  future.
+                </p>
+              </Col>
+              <Col md={6}>
+                <FaAnchor size={30} />
+                <h4>MAINTAINABLE</h4>
+                <p>
+                  Our Products are fully maintainable for the injection of any
+                  new Functionality or Requirement.
+                </p>
+              </Col>
+            </Row>
+          </Col>
+          <Col md={6} className={Styles.image_col}>
+            <img src={homeMotiveImg} alt="Motive" className={Styles.motive_img} />
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
       {/* =================================================Services */}
-      <Services />
-      {/* =================================================Parallax */}
-      <div className={Styles.parallax}></div>
+      {/* <Services /> */}
+      {/* ========================================Trainer */}
+      <HomeTrainer/>
       {/* =================================================Testimonial */}
+      <section className={Styles.testimonal_section}>
+        <h1>What Our Client Says</h1>
       <Testimonial />
+      </section>
+      <SubscriptionForm/>
+
     </div>
   );
 };

@@ -68,8 +68,8 @@ function CourseSlider() {
                             <FaChalkboardTeacher /> <b>{course.enviroment}</b>
                           </span>
                         </div>
-                        <Link to={`/Detail/${course.id}`}>More Detail</Link>
                       </div>
+                        <Link to={`/Detail/${course.id}`} className={Styles.btn}>More Detail</Link>
                     </div>
                   </div>
                 );

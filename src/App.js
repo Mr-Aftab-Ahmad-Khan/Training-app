@@ -17,7 +17,7 @@ import BlogPage from "./Pages/BLogPage/BlogPage";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Footer from "./Components/Footer/Footer";
 import Detail from "./Components/Detail/Detail";
-import LoginForm from "./Components/LoginForm/LoginForm";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -26,13 +26,14 @@ function App() {
       <Router>
         <ModernNavbar />
         <Routes>
+          <Route path="/admin" element={<Dashboard/>} />
           <Route path="/" element={<Home />} />
           <Route path="/Courses" element={<Courses />} />
           <Route path="/Blog" element={<BlogPage/>} />
           <Route path="/About" element={<AboutUs/>} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Detail/:courseId" element={<Detail />} />
-          <Route path="/Login" element={<LoginForm />} />
+        
         </Routes>
           <Footer/>
       </Router>

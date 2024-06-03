@@ -58,7 +58,7 @@
     border-right: 1px solid black;
   }
   .contact_banner h2 {
-    color: #fdab00;
+    color: var(--text-color);
     font-size: 2rem !important;
     padding: 1rem;
     text-align: center;
@@ -102,52 +102,34 @@
     padding: 20px;
   }
 }
-.contact_banner h2 {
-  color: #fdab00;
+.connect_section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--primary);
+  text-align: center;
+  color: var(--text-color);
+}
+
+.connect_content h1 {
   font-size: 2.5rem;
   padding: 1rem;
 }
 
-.connect_section {
-  margin-top: 5rem;
-  padding: 2rem;
-  background-color: var(--primary);
-  box-shadow: -10px -15px 10px 10px rgba(231, 144, 43, 0.5);
-}
-.connect_content {
-  text-align: center;
-  color: var(--text-color) !important;
-}
-.connect_icons p {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-color);
-}
 .connect_icons {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
-  color: #fdab00;
 }
-.call {
+
+.icon_block {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
 }
-.address {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.mail {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.hours {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+
+.icon_block h5,
+.icon_block p {
+  margin: 0.5rem 0;
 }

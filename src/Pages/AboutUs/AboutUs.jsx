@@ -8,10 +8,9 @@ import { FiTarget } from "react-icons/fi";
 import { TbTargetArrow } from "react-icons/tb";
 import { GiTargetShot } from "react-icons/gi";
 import "./About.css"; // Custom CSS file for additional styling
-import portfolioImg from "../../Assets/Pics/graphic-designing-min.jpg"; // Replace with your image path
-import teamImg from "../../Assets/Pics/mobile-app-dev-min.jpg"; // Replace with your image path
+import aboutHeadImg from "../../Assets/Pics/abouthead.jpeg";
+import teamImg from "../../Assets/Pics/ourMission.jpeg"; // Replace with your image path
 import AboutHeader from "../../Components/AboutHeader/AboutHeader";
-// import SubscriptionForm from "../../Components/SubForm/SubscriptionForm";
 
 const About = () => {
   const Trainers = [
@@ -55,14 +54,18 @@ const About = () => {
                 software development industry. Our mission is to foster a
                 culture of continuous learning, creativity, and excellence,
                 ensuring that we stay at the forefront of technological
-                advancements.
+                advancements. Our mission is simple yet profound - to empower
+                you to become confident, capable, and creative technologists. By
+                providing personalized guidance, valuable resources, and
+                unwavering support, I'm committed to helping you turn your tech
+                dreams into reality.
               </p>
             </Col>
             <Col md={6}>
               <img
-                src={portfolioImg}
+                src={aboutHeadImg}
                 alt="Journey to Learn"
-                className="about-image"
+                className="afterHead_img"
               />
             </Col>
           </Row>
@@ -86,9 +89,9 @@ const About = () => {
                     <Card.Text>{trainer.Bio}</Card.Text>
                     <b>Designation: {trainer.Designation}</b>
                     <p>
-                      <FaFacebookSquare size={30} color="#62041f" />
-                      <FaInstagramSquare size={30} color="#62041f" />
-                      <FaSquareXTwitter size={30} color="#62041f" />
+                      <FaFacebookSquare size={30} color="#1eb2b4" />
+                      <FaInstagramSquare size={30} color="#1eb2b4" />
+                      <FaSquareXTwitter size={30} color="#1eb2b4" />
                     </p>
                   </Card.Body>
                 </Card>
@@ -104,7 +107,7 @@ const About = () => {
                     {[...Array(3)].map((_, idx) => (
                         <div className="portfolio-row" key={idx}>
                             <div className="portfolio-column-image">
-                                <img src={portfolioImg} alt="Portfolio" className="portfolio-image" />
+                                <img src={aboutHeadImg} alt="Portfolio" className="portfolio-image" />
                             </div>
                             <div className="portfolio-column-content">
                                 <h3>My Work</h3>
@@ -119,14 +122,14 @@ const About = () => {
         <Container fluid className="gx-0">
           <Row className="align-items-center">
             <Col md={6} className="p-4">
-              <Card className="text-dark">
-                <Card.Body>
+              <Card>
+                <Card.Body className="tuition-card">
                   <Card.Title className="mb-4">
-                    Check Out Our Tuition Views
+                    <h2>Check Out Our Tuition Views</h2>
                   </Card.Title>
-                  <Card.Text>
-                    <h5>
-                      <FiTarget /> Our Mission
+                  <Card.Text className="tuition-card">
+                    <h5 style={{color:"#1EB2B4"}}>
+                      <FiTarget size={30} color="#1EB2B4"/> Our Mission
                     </h5>
                     <p>
                       Our mission is to provide quality education of
@@ -134,16 +137,16 @@ const About = () => {
                       respectful, and inclusive environment that builds a
                       foundation for life-long learning.
                     </p>
-                    <h5>
-                      <TbTargetArrow /> Our Vision
+                    <h5 style={{color:"#1EB2B4"}}>
+                      <TbTargetArrow size={30} color="#1EB2B4"/> Our Vision
                     </h5>
                     <p>
                       Our vision is for each child to develop a urge to learn,
                       discover their interests and grow in their love of
                       knowledge.
                     </p>
-                    <h5>
-                      <GiTargetShot /> Director Disk
+                    <h5 style={{color:"#1EB2B4"}}>
+                      <GiTargetShot size={30} color="#1EB2B4"/> Director Disk
                     </h5>
                     <p>
                       The origin of Solid Tuitions is rooted in the philosophy
@@ -155,8 +158,8 @@ const About = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={6} className="text-center text-md-start">
-              <Image src={teamImg} fluid className="students-image" />
+            <Col md={6} className="image-container">
+              <Image src={teamImg} fluid className="mission-image" />
             </Col>
           </Row>
         </Container>

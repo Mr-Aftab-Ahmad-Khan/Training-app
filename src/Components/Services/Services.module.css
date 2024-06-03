@@ -8,16 +8,16 @@
     font-size: 4em;
     color: var(--secondary);
     margin: 20px;
+    padding: 1rem;
   }
-  
   .features_cards {
     background-color: var(--primary);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted */
-    gap: 15px; /* Adjusted */
-    padding: 15px; /* Adjusted */
-    width: 99vw; /* Ensures the container spans the full viewport width */
-    margin-left: calc(-50vw + 50%); /* Centers the container */
+    grid-template-columns: repeat(4, 1fr); /* Set to 4 columns */
+    gap: 25px;
+    padding: 3rem;
+    width: 99vw;
+    margin-left: calc(-50vw + 50%);
   }
   
   @media (max-width: 992px) {
@@ -33,8 +33,9 @@
   }
     
   .feature_card {
-    background-color: #fff;
+    background-color: var(--text-color);
     border-radius: 10px;
+    /* border: 6px solid red !important; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;

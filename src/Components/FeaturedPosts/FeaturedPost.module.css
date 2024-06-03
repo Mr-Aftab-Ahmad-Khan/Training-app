@@ -1,8 +1,11 @@
 .pading_above{
     padding-top:2.5rem;
     color: var(--text-color);
+    background-color: var(--primary);
 }
-
+.recent_posts{
+    border-right: 3px dashed white;
+}
 .recentImg{
     max-width: 100%;
     /* width: 300px; */
