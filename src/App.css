@@ -1,0 +1,12 @@
+:root{
+    /* BG Color */
+    --primary: #1eb2b4; 
+    /* Shades/Exectiopnal */
+    --secondary:#2C3532;
+    /* Hover and shuttering */
+    --hover-bg:#ff85c0;
+    /* Font Color */
+    --text-color:#fff;
+    /* Heading Color */
+    --heading:#000000;
+}

@@ -1,0 +1,177 @@
+.courseHead{
+    height: 300px;
+  width: 100%;
+  text-align: center;
+  background: var(--primary); /* Add your background image if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+.courseCard {
+    width: 400px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 15px 0px; /* Decreased horizontal margin */
+    background: #fafafa;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 0.05rem;; /* Decreased horizontal padding */
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: red;
+    color: #fff;
+    padding: 3px 10px;
+}
+.explore_btn{
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #3d405b;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 15px;
+   }
+   
+   .explore_btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   }
+   
+   .explore_btn span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+   }
+   
+   .explore_btn:hover span {
+    padding-right: 15px;
+   
+   
+   }
+   
+   .explore_btn:hover span:after {
+    opacity: 1;
+    right: 0;
+   }
+
+.courseImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+.courseImg img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.courseDetails {
+    padding: 30px;
+}
+
+.courseCategory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.courseDetails h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.courseDetails h4 a:hover {
+    color: #fbb72c;
+}
+
+.courseDetails p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.courseBottomDetails {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.courseBottomDetails div {
+    float: left;
+    width: 50%;
+}
+
+.coursePrice {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.coursePrice small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.courseLinks {
+    text-align: right;
+}
+
+.courseLinks a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.courseLinks a:hover {
+    color: #fbb72c;
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 0.3rem;
+}

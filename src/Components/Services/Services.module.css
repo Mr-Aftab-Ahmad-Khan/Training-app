@@ -1,33 +1,41 @@
 .features_container {
     text-align: center;
-    padding: 20px;
-    background-color: #e0f7fa;
+    padding-bottom: 20px;
+    /* background-color: WSS#e0f7fa; */
   }
   
   .features_container h2 {
     font-size: 4em;
-    color: #FDAB00;
+    color: var(--secondary);
     margin: 20px;
+    padding: 1rem;
+  }
+  .features_cards {
+    background-color: var(--primary);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Set to 4 columns */
+    gap: 25px;
+    padding: 3rem;
+    width: 99vw;
+    margin-left: calc(-50vw + 50%);
   }
   
-  .features_cards {
-    background-color: #FDAB00;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    width: 99vw; /* Added */
-    margin-left: calc(-50vw + 50%); /* Added */
-  }
   @media (max-width: 992px) {
     .features_cards {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout on smaller screens */
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted for smaller screens */
     }
   }
   
+  @media (max-width: 768px) {
+    .features_cards {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Further adjustments for very small screens */
+    }
+  }
+    
   .feature_card {
-    background-color: #fff;
+    background-color: var(--text-color);
     border-radius: 10px;
+    /* border: 6px solid red !important; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
@@ -49,7 +57,7 @@
   
   .feature_card h3 {
     font-size: 1.5em;
-    color: #FDAB00;
+    color: var(--primary);
     margin-bottom: 10px;
   }
   
@@ -59,7 +67,7 @@
   }
   
   .more_button {
-    background-color: #FDAB00;
+    background-color:var(--primary);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -69,6 +77,6 @@
   }
   
   .more_button:hover {
-    background-color: #004d40;
+    background-color: var(--secondary);
   }
   

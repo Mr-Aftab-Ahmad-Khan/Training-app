@@ -6,28 +6,39 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Snow from 'react-quill/dist/quil'
 /////////////////////////////////////////////// importing components and pages
 import HeaderInfo from "./Components/Header-Info/HeaderInfo";
-import FeaturedCourses from "./Components/FeaturedCourses/FeaturedCourses";
-import Navbar from "./Components/Navbar/Navbar";
+import ModernNavbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import ContactUs from "./Pages/Contact/ContactUs";
+import Courses from "./Pages/Courses/Courses";
+import BlogPage from "./Pages/BLogPage/BlogPage";
+import AboutUs from "./Pages/AboutUs/AboutUs";
+import Footer from "./Components/Footer/Footer";
+import Detail from "./Components/Detail/Detail";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 function App() {
   return (
     <div className="App">
       <HeaderInfo />
       <Router>
-        <Navbar />
+        <ModernNavbar />
         <Routes>
-          <Route path="/" element={""} />
-          <Route path="/about" element={""} />
-          <Route path="/services" element={""} />
-          <Route path="/contact" element={""} />
+          <Route path="/admin" element={<Dashboard/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/Courses" element={<Courses />} />
+          <Route path="/Blog" element={<BlogPage/>} />
+          <Route path="/About" element={<AboutUs/>} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/Detail/:courseId" element={<Detail />} />
+        
         </Routes>
+          <Footer/>
       </Router>
-      {/* <Home /> */}
-      <ContactUs />
+
+
     </div>
   );
 }
