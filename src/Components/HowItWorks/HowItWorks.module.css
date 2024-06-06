@@ -1,0 +1,47 @@
+.deco{
+  padding: 1rem;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+.stepCard {
+  background-color: #ceddf6 !important;
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.stepShape{
+    margin-top: 3rem;
+}
+.stepShape2{
+    margin-top: 8rem;
+}
+.stepNumber {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: bold;
+  color: #002855;
+  margin-bottom: 10px;
+}
+
+.stepTitle {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #002855;
+  margin-bottom: 10px;
+}
+
+.stepDescription {
+  font-size: 1rem;
+  color: #333;
+}
+
+.getStartedButton {
+  background-color: #0056b3;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
