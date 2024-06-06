@@ -17,7 +17,7 @@ const Detail = () => {
   return (
     <>
     <Container >
-      <Row >
+      <Row className={Styles.space_top} >
         <Col lg={6} className={Styles.course_img}>
           <img src={courseDetail.img} alt=""  />
         </Col>
@@ -44,10 +44,7 @@ const Detail = () => {
       </Row>
 
     </Container>
-      <Container className={Styles.more_course}>
-      <h1>More Course Offering</h1>
-      <CourseSlider/>
-      </Container>
+     
       </>
   );
 };

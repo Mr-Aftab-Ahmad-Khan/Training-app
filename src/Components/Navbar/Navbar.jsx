@@ -20,6 +20,7 @@ const ModernNavbar = () => {
             <Link to="/" className={Styles.nav_link}>Home</Link>
             <Link to="/Courses" className={Styles.nav_link}>Courses</Link>
             <Link to="/Blog" className={Styles.nav_link}>Latest Blog</Link>
+            <Link to="/Service" className={Styles.nav_link}>Service</Link>
             <Link to="/about" className={Styles.nav_link}>About</Link>
             <Link to="/ContactUs" className={Styles.nav_link}>Contact</Link>
             {isAuthenticated && (

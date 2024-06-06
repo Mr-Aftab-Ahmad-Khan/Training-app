@@ -18,7 +18,8 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import Footer from "./Components/Footer/Footer";
 import Detail from "./Components/Detail/Detail";
 import Dashboard from "./Components/Dashboard/Dashboard";
-
+import BlogDetail from './Components/Detail/BlogDetail'
+import Services from "./Pages/Services/Services";
 function App() {
   return (
     <div className="App">
@@ -30,9 +31,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Courses" element={<Courses />} />
           <Route path="/Blog" element={<BlogPage/>} />
+          <Route path="/Service" element={<Services/>} />
           <Route path="/About" element={<AboutUs/>} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Detail/:courseId" element={<Detail />} />
+          <Route path="/BlogDetail/:blogId" element={<BlogDetail/>} />
         
         </Routes>
           <Footer/>

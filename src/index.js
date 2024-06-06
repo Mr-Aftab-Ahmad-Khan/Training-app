@@ -9,14 +9,14 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  <Auth0Provider
-    domain="dev-gtat6gks0jeme5l8.us.auth0.com"
-    clientId="JcEYsia4hzuEpNriByzGJfepX5xJ10bU"
-    authorizationParams={{
-      redirect_uri: window.location.origin
-    }}
-  >
+  // <Auth0Provider
+  //   domain="dev-gtat6gks0jeme5l8.us.auth0.com"
+  //   clientId="JcEYsia4hzuEpNriByzGJfepX5xJ10bU"
+  //   authorizationParams={{
+  //     redirect_uri: window.location.origin
+  //   }}
+  // >
     <App />
-    </Auth0Provider>
+    // </Auth0Provider>
   // </React.StrictMode>
 );

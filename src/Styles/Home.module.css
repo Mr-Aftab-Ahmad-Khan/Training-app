@@ -83,19 +83,22 @@
 }
 
 .heading_wrapper {
-  width: 100%; /* Full viewport width */
-  background-color: var(--primary);
+  /* width: 100%; Full viewport width */
+  /* background-color: var(--primary); */
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   color: var(--text-color);
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Subtle shadow for depth */
 }
 
 .heading_wrapper h1 {
   margin: 0;
-  font-size: 3rem;
-  font-weight: bold;
+  color: #4F4F4F;
+  /* font-size: 3rem; */
+  /* font-weight: bold; */
   letter-spacing: 1px;
 }
 
