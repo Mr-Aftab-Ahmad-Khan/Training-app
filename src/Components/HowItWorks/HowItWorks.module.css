@@ -21,7 +21,7 @@
   font-size: 6rem;
   line-height: 1;
   font-weight: bold;
-  color: #002855;
+  color:var(--text-color);
   margin-bottom: 10px;
 }
 
@@ -29,7 +29,7 @@
   font-size: 20px;
   line-height: 22px;
   font-weight: 600;
-  color: #002855;
+  color:var(--text-color);
   margin-bottom: 10px;
 }
 
@@ -43,5 +43,4 @@
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
-  font-size: 1rem;
 }

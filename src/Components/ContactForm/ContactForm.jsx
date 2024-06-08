@@ -5,11 +5,12 @@ import './ContactForm.css'; // Custom CSS file for additional styling
 import { IoHomeSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
+
 const ContactForm = () => {
     return (
         <Container className="contact-container">
             <Row className="contact-row">
-                <Col md={7} className="contact-form-section">
+                <Col md={6} className="contact-form-section">
                     <h3>Send us a message</h3>
                     <Form>
                         <Row>
@@ -27,7 +28,7 @@ const ContactForm = () => {
                             </Col>
                         </Row>
                         <Row>
-                            <Col md={6} className="mb-3">
+                            <Col md={5} className="mb-3">
                                 <Form.Group controlId="formPhone">
                                     <Form.Label>Phone</Form.Label>
                                     <Form.Control type="text" placeholder="Phone #" />
@@ -49,14 +50,15 @@ const ContactForm = () => {
                         </Button>
                     </Form>
                 </Col>
-                <Col md={5} className="contact-info-section">
+                <Col md={6} className="contact-info-section">
                     <h3>Contact Information</h3>
-                    <p>Need assistance?</p>
-                    <p>Our team is just a message away.</p>
-                    <p><strong><IoHomeSharp size={30}  /></strong> United Plaza Faisalabad - Sheikhupura - Lahore Road</p>
-                    <p><strong><FaPhoneAlt size={30} /></strong> +92 324 7730 410</p>
-                    <p><strong><IoMail size={30} /></strong> info@bzsoftech.com</p>
-                    </Col>
+                    <p>Need assistance? Our team is just a message away.</p>
+                    <div className="contact-info">
+                        <p><IoHomeSharp size={30} /> United Plaza Faisalabad - Sheikhupura - Lahore Road</p>
+                        <p><FaPhoneAlt size={30} /> +92 324 7730 410</p>
+                        <p><IoMail size={30} /> info@bzsoftech.com</p>
+                    </div>
+                </Col>
             </Row>
         </Container>
     );

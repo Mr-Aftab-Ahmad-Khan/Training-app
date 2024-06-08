@@ -15,7 +15,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoMdClock } from "react-icons/io";
 import homeMotiveImg from "../../Assets/Pics/homeMotive.jpeg";
 import { Link } from "react-router-dom";
-import Services from "../../Components/Services/Services";
+import Services from "../../Components/ServicesCard/ServicesCard";
 import Testimonial from "../../Components/Testimonial/Testimonial";
 import HomeTrainer from "../../Components/HomeTrainer/HomeTrainer";
 import Detail from "../../Components/Detail/Detail";

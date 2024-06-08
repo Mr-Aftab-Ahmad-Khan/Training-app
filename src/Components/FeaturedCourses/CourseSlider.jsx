@@ -47,7 +47,7 @@ function CourseSlider() {
   };
 
   return (
-    <div className="slider-container">
+    <div className={Styles.sliderContainer}>
       <Container>
         <Row>
           <Col>
@@ -56,7 +56,7 @@ function CourseSlider() {
                 return (
                   <div key={course.id} className={Styles.courseDetail}>
                     <div className={Styles.glossyEffects}>
-                      <img src={course.img} alt="" />
+                      <img src={course.img} alt={course.title} />
                       <div className={Styles.content}>
                         <h3>{course.title}</h3>
                         <p>Category: {course.Category}</p>
@@ -69,7 +69,9 @@ function CourseSlider() {
                           </span>
                         </div>
                       </div>
-                        <Link to={`/Detail/${course.id}`} className={Styles.btn}>More Detail</Link>
+                      <Link to={`/Detail/${course.id}`} className={Styles.btn}>
+                        More Detail
+                      </Link>
                     </div>
                   </div>
                 );

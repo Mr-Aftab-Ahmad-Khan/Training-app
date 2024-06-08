@@ -15,7 +15,7 @@ body{
   /* BG Color */
   /* --primary: #1eb2b4; */
   /* --primary: #EEF1FF; */
-  --primary: #d9dfe7;
+  --primary: #e7ecf1;
   /* --primary: #F7F7FA; */
   /* Shades/Exectiopnal */
   --secondary: #2c3532;
@@ -25,4 +25,7 @@ body{
   --text-color: #000;
   /* Heading Color */
   --heading: #000000;
+}
+.carousel-control-prev, .carousel-control-next{
+  display: none !important;
 }

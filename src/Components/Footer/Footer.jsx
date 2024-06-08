@@ -1,96 +1,60 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaRss } from "react-icons/fa";
 import Styles from "./Footer.module.css";
-
+import { Container, Row, Col } from "react-bootstrap";
+import logo from '../../Assets/Pics/bzsoftech-logo.png'
 const Footer = () => {
   return (
     <footer className={Styles.footer}>
-      <div className={Styles.footer_content}>
-        <div className={Styles.company_info}>
-          <h3>BZSoftech</h3>
-          <p>
-            BZSoftech is a leading software solutions provider, offering
-            innovative and tailored solutions to businesses of all sizes. With a
-            team of skilled professionals, we develop software applications,
-            websites, and mobile apps, empowering organizations to enhance
-            productivity, and achieve their digital goals.
-          </p>
-        
-        </div>
-
-        <div className={Styles.about}>
-          <h3>Courses</h3>
-          <table>
-            <tbody>
-              <tr>
-                <td>Web</td>
-                <td>SEO</td>
-              </tr>
-              <tr>
-                <td>Graphic Design</td>
-                <td>AI Workshop</td>
-              </tr>
-              <tr>
-                <td>Mern Stack</td>
-                <td>ERP</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className={Styles.follow_us}>
-          <h3>Follow Us</h3>
-          <table>
-            <tbody>
-              <tr>
-                <td>
-                  <FaFacebook size={40}/>
-                </td>
-                <td>Facebook</td>
-              </tr>
-              <tr>
-                <td>
-                  <FaTwitter size={40}/>
-                </td>
-                <td>Twitter</td>
-              </tr>
-              <tr>
-                <td>
-                  <FaInstagram size={40}/>
-                </td>
-                <td>Instagram</td>
-              </tr>
-              <tr>
-                <td>
-                  <FaRss size={40}/>
-                </td>
-                <td>RSS</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className={Styles.opening_hours}>
-          <h3>Opening Hours</h3>
-          <table>
-            <tbody>
-              <tr>
-                <td>Monday - Friday:</td>
-                <td>9am - 6pm</td>
-              </tr>
-              <tr>
-                <td>Saturday:</td>
-                <td>10am - 4pm</td>
-              </tr>
-              <tr>
-                <td>Sunday:</td>
-                <td>Closed</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <p style={{textAlign:"center"}}>&copy; 2024 BZSoftech. All rights reserved</p>
+      <Container>
+        <Row>
+          <Col md={4}>
+            <img src={logo} alt="" width={400}/>
+            <h1>About Company</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nam
+              eos quaerat possimus fugit eum!
+            </p>
+          </Col>
+          <Col md={8}>
+            <Row className={Styles.footerLinks}> {/* Added class for styling */}
+              <Col md={4} className={Styles.footerIcons}> {/* Added class for styling */}
+                <FaFacebook size={30} />
+                <FaInstagram size={30} />
+                <FaTwitter size={30} />
+                <FaRss size={30} />
+              </Col>
+              <Col md={6} className={Styles.footerSnd}> {/* Added class for styling */}
+                <div class={Styles.input_field}>
+                  <input required="" name="text" type="text" placeholder="Email" /> 
+                  
+                </div>
+                <button className={Styles.mailBtn}>Send</button>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={4}>
+                <h5>Solution</h5>
+                <p>Digital Work</p>
+                <p>Tech Assistance</p>
+              </Col>
+              <Col md={4}>
+                <h5>Trending</h5>
+                <p>Posts</p>
+                <p>Posts</p>
+                <p>Posts</p>
+              </Col>
+              <Col md={4}>
+                <h5>Company</h5>
+                <p>About</p>
+                <p>Events</p>
+                <p>Contact</p>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+      <div className="copyRightLine">&copy; 2024 Your Company Name. All rights reserved.</div>
     </footer>
   );
 };
