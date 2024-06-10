@@ -28,10 +28,10 @@ const ContactForm = () => {
                             </Col>
                         </Row>
                         <Row>
-                            <Col md={5} className="mb-3">
+                            <Col md={6} className="mb-3">
                                 <Form.Group controlId="formPhone">
                                     <Form.Label>Phone</Form.Label>
-                                    <Form.Control type="text" placeholder="Phone #" />
+                                    <Form.Control className="hide_arrow" type="number"  minlength="12" maxlength="12" placeholder="+92" />
                                 </Form.Group>
                             </Col>
                             <Col md={6} className="mb-3">
@@ -46,7 +46,7 @@ const ContactForm = () => {
                             <Form.Control as="textarea" rows={3} placeholder="Write your message" />
                         </Form.Group>
                         <Button variant="primary" type="submit" className="send-button">
-                            Send Message
+                            SUBMIT
                         </Button>
                     </Form>
                 </Col>

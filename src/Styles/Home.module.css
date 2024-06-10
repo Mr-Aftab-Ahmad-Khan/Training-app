@@ -22,7 +22,7 @@
   color: var(--text-color);
 }
 .aluminiCard h1 {
-  color: var(--text-color);
+  color: whitesmoke;
   padding: 1rem;
 }
 /* ==============================================================Event */
