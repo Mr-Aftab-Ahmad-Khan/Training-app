@@ -1,0 +1,125 @@
+.project_card_holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .project_card {
+    position: relative;
+    width: 300px;
+    height: auto;
+    background: #CEDDF6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(145, 229, 235, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .project_card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project_card__content {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .project_card__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project_card__description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .button {
+    --clr: #7808d0;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--clr);
+    color: #fff;
+    border-radius: 10rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s;
+  }
+  
+  .button__iconWrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--clr);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  .button:hover {
+    background-color: #000;
+  }
+  
+  .button:hover .button__iconWrapper {
+    color: #000;
+  }
+  
+  .button__iconSvg {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .button__iconSvgCopy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button:hover .button__iconSvg {
+    transform: translate(150%, -150%);
+  }
+  
+  .button:hover .button__iconSvgCopy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0);
+  }
+  
+  .project_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(110, 211, 224, 0.301);
+  }
+  
+  .project_card:hover .read_more {
+    opacity: 1;
+  }
+  
+  .project_card:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(106, 212, 226, 0.5);
+    z-index: 1;
+  }
+  
+  .project_card__content {
+    position: relative;
+    z-index: 2;
+  }
+  
