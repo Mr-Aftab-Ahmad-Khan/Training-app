@@ -15,8 +15,10 @@ const Ceo = () => {
             />
           </Col>
           <Col lg={6}>
-            <div className={Styles.text}>
-              <p className={Styles.quote}>
+            <div className={Styles.text } >
+            
+              <p className={Styles.quote}>  
+                <h3>CEO Message</h3>
                 <b>
                   "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Cumque necessitatibus cupiditate perferendis qui laboriosam
