@@ -1,4 +1,23 @@
 /* CSS Module: Services.module.css */
+.services_header {
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  background: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bgc{
+  background-color: #FFFFFF;
+  padding: 1rem 0rem;
+}
 .methodology {
     margin-top: 30px;
     margin-bottom: 30px;

@@ -9,8 +9,13 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
-    <div>
+    <div >
+      <section className={Styles.services_header}>
+        <h1>Services We Offer</h1>
+      </section>
+      <div className={Styles.bgc}>
       <ProductSlider />
+      </div>
       <ServiceCard />
 
       <Container className={Styles.methodology}>

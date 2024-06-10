@@ -3,6 +3,8 @@ import Styles from "./HeroSection.module.css";
 import StyleHandler from "./StyleHandler.css";
 import Carousel from "react-bootstrap/Carousel";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 const HeroSection = () => {
   return (
     <div>
@@ -24,7 +26,8 @@ const HeroSection = () => {
                       journey of growth and discovery with us. Enroll now and be
                       a part of our success story!"
                     </p>
-                    <button className={Styles.button}>
+                    
+                    <Link to='/courses'><button className={Styles.button}>
                       Apply Now
                       <svg
                         fill="currentColor"
@@ -37,7 +40,7 @@ const HeroSection = () => {
                           fill-rule="evenodd"
                         ></path>
                       </svg>
-                    </button>
+                    </button></Link>
                   </div>
                 </div>
               </div>

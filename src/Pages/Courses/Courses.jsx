@@ -9,7 +9,9 @@ import courses from "../../Assets/Data/Coursedetail";
 const Courses = () => {
   return (
     <div>
-        <h1 className={Styles.courseHead}>Our Featured Courses</h1>
+    <section className={Styles.courses_header}>
+        <h1>Featured Courses</h1>
+      </section>
       <div className={Styles.wrapper}>
         {courses.map((course) => {
           return (

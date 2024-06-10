@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import Styles from './HowItWorks.module.css';
-
+import { Link } from 'react-router-dom';
 const HowItWorks = () => {
   return (
     <Container className="py-5">
@@ -41,7 +41,7 @@ const HowItWorks = () => {
         </Col>
       </Row>
       <div className="text-center mt-4">
-        <Button variant="primary" className={Styles.getStartedButton}>Get Started for Free</Button>
+       <Link to='/ContactUs'> <Button variant="primary" className={Styles.getStartedButton}>Get Started for Free</Button></Link>
       </div>
     </Container>
   );

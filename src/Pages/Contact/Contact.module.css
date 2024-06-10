@@ -2,15 +2,17 @@
   height: 300px;
   width: 100%;
   text-align: center;
-  background: var(--primary); /* Add your background image if needed */
+  background: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: underline;
   color: var(--text-color);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
 /* ===================================== */
 .form_handler {
   margin-top: 10px;
