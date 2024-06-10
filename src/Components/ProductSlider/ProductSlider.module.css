@@ -1,0 +1,27 @@
+.space_above{
+  margin-top: 3rem;
+  background-color: #ffff !important;
+}
+.carousel-item img {
+  width: 1080px !important; 
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensures the image fits within the container */
+}
+
+.carousel {
+  width: 1080px;
+  max-width: 100%;
+
+  max-height: 500px; /* Adjust the max height as needed */
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px; /* Adjust to match the max-height of the carousel */
+}
+
+

@@ -1,37 +1,91 @@
-.blog_container{
-    margin-top: 1rem;
-  }
-.blog_header {
-    height: 300px;
-    width: 100%;
-    text-align: center;
-    background: var(--primary); /* Add your background image if needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: underline;
-    color: var(--text-color);
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  .author_profile{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-  }
+/* CSS Module: BlogPage.module.css */
 
-  .blog_card{
-    display: flex;
-    /* border: .5px solid lightslategrey; */
-    line-height: 30px;
-    padding: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  }
-  .blog_Img{
-    height: 200px;
-    width: 200px;
-  }
-  .blog_description{
-    padding-left: .5rem;
-  }
-  
+
+.blog_container {
+  margin-top: 2rem;
+}
+
+.blog_header {
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  background: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.author {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.author_profile {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.about_author p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about_author b {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* YourStyles.module.css */
+.blog_card {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.blog_Img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.blog_description {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog_description b {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.blog_description h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog_description a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog_description a:hover {
+  text-decoration: underline;
+}

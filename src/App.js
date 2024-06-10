@@ -5,6 +5,7 @@ import "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'swiper/css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Snow from 'react-quill/dist/quil'
 /////////////////////////////////////////////// importing components and pages
@@ -19,6 +20,7 @@ import Footer from "./Components/Footer/Footer";
 import Detail from "./Components/Detail/Detail";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import BlogDetail from './Components/Detail/BlogDetail'
+import ProjectDetail from './Components/Detail/ProjectDetail'
 import Services from "./Pages/Services/Services";
 function App() {
   return (
@@ -36,6 +38,7 @@ function App() {
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Detail/:courseId" element={<Detail />} />
           <Route path="/BlogDetail/:blogId" element={<BlogDetail/>} />
+          <Route path="/ProjectDetail/:projectId" element={<ProjectDetail/>} />
         
         </Routes>
           <Footer/>

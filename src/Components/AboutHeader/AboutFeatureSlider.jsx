@@ -2,15 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "./AboutFeatureSlider.css";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import { GrDocumentPerformance } from "react-icons/gr";
-import { GrAchievement } from "react-icons/gr";
-import { GiTechnoHeart } from "react-icons/gi";
-import { GiStairsGoal } from "react-icons/gi";
-import SubscriptionForm from "../SubForm/SubscriptionForm";
+import { GrDocumentPerformance, GrAchievement } from "react-icons/gr";
+import { GiTechnoHeart, GiStairsGoal } from "react-icons/gi";
 
 function AboutFeatureSlider() {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -45,63 +42,29 @@ function AboutFeatureSlider() {
       },
     ],
   };
+
+  const features = [
+    { icon: <IoMdCheckmarkCircleOutline size={70} />, label: "Success" },
+    { icon: <GrDocumentPerformance size={70} />, label: "Performance" },
+    { icon: <GrAchievement size={70} />, label: "Achievement" },
+    { icon: <GiTechnoHeart size={70} />, label: "Recognition" },
+    { icon: <GiStairsGoal size={70} />, label: "Future" },
+  ];
+
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <div className="expertise_container">
-          <div className="expertise_img">
-            <div className="expertise_text">
-              <IoMdCheckmarkCircleOutline
-                size={70}
-                color="#149092"
-                className="changes"
-              />{" "}
-              <h4>Success</h4>
+        {features.map((feature, index) => (
+          <div className="expertise_container" key={index}>
+            <div className="expertise_img">
+              <div className="expertise_text">
+                {feature.icon}
+                <h4>{feature.label}</h4>
+              </div>
+              <div className="expertise_overlay"></div>
             </div>
-            <div className="expertise_overlay"></div>
           </div>
-        </div>
-
-        <div className="expertise_container">
-          <div className="expertise_img">
-            <div className="expertise_text">
-              <GrDocumentPerformance
-                size={70}
-                color="#149092"
-                className="changes"
-              />{" "}
-              <h4>Performance</h4>
-            </div>
-            <div className="expertise_overlay"></div>
-          </div>
-        </div>
-        <div className="expertise_container">
-          <div className="expertise_img">
-            <div className="expertise_text">
-              <GrAchievement size={70} color="#149092" className="changes" />{" "}
-              <h4>Achievement</h4>
-            </div>
-            <div className="expertise_overlay"></div>
-          </div>
-        </div>
-        <div className="expertise_container">
-          <div className="expertise_img">
-            <div className="expertise_text">
-              <GiTechnoHeart size={70} color="#149092" className="changes" />{" "}
-              <h4>Recognition</h4>
-            </div>
-            <div className="expertise_overlay"></div>
-          </div>
-        </div>
-        <div className="expertise_container">
-          <div className="expertise_img">
-            <div className="expertise_text">
-              <GiStairsGoal size={70} color="#149092" className="changes" />{" "}
-              <h4>Future</h4>
-            </div>
-            <div className="expertise_overlay"></div>
-          </div>
-        </div>
+        ))}
       </Slider>
     </div>
   );

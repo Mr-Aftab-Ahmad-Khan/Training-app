@@ -1,9 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Blogs from "../../Assets/Data/Blogs";
 import Styles from "./BlogDetail.module.css";
-
 const BlogDetail = () => {
   const { blogId } = useParams(); // Destructure blogId from useParams
   const blog = Blogs.find((blog) => blog.id === blogId);
@@ -28,6 +27,7 @@ const BlogDetail = () => {
             <small>Blog Category :</small>
             <strong> {blog.BCategory}</strong>
           </div>
+          <Link to='/blog'>Back to Blogs</Link>
         </Col>
       </Row>
     </Container>

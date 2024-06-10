@@ -19,7 +19,7 @@
 
 .nav_link {
   position: relative;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   color: #fff;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -61,8 +61,39 @@
   width: 100%;
 }
 
+.profile_dropdown {
+  margin-left: 1rem;
+}
+
+.profile_toggle {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.profile_icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
 .user_name {
-  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.dropdown_menu {
+  background: #3d3a4e;
+  color: #fff;
+  border: none;
+}
+
+.dropdown_menu .dropdown-item {
+  color: #fff;
+}
+
+.dropdown_menu .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .login_button {

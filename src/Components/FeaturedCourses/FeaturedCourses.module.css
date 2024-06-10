@@ -7,7 +7,7 @@
     background: linear-gradient(to right, #4db8ff, #4fd2a5);
     border-radius: 10px;
     padding: 20px;
-    color: white;
+    color: var(--text-color);
     flex-wrap: wrap; /* Ensure items wrap on smaller screens */
   }
   

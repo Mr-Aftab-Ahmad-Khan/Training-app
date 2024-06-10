@@ -65,7 +65,7 @@
 }
 
 .employeeName {
-  color: #fff;
+  color: var(--text-color);
   font-weight: bold;
   padding: 5px;
 }

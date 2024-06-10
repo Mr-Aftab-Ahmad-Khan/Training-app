@@ -1,112 +1,93 @@
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 2rem;
-  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light theme background */
+  padding: 2rem 0; /* Increased padding for more space */
+  color: #343a40; /* Dark text color for contrast */
 }
 
-.footer_content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.company_info,
-.about,
-.follow_us,
-.opening_hours {
-  width: calc(25% - 1rem);
-  margin-bottom: 2rem;
+.footer .brandName img {
+  width: 400px; /* Increased width for a larger logo */
+  max-width: 100%;
+  margin-bottom: 1rem; /* Added margin bottom for spacing */
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  padding: 1rem;
 }
 
-.company_info h3,
-.about h3,
-.follow_us h3,
-.opening_hours h3 {
-  font-size: 1.2rem;
+.footer .divider {
+  border-top: 1px solid #dee2e6;
+  margin: 1.5rem 0; /* Increased margin for better spacing */
+}
+
+.footer .contact {
   margin-bottom: 1rem;
 }
 
-.opening_hours table {
-  width: 100%;
-  border-collapse: collapse;
+.footer .contact h3 {
+  font-size: 1.75rem; /* Increased font size */
+  margin-bottom: 1rem; /* Added margin bottom */
 }
 
-.opening_hours td {
-  padding: 0.5rem;
-  border-bottom: 1px solid #555;
+.footer .contact p {
+  margin: 0.75rem 0; /* Increased margin for spacing */
+  font-size: 1rem; /* Improved readability */
 }
 
-.opening_hours td:first-child {
-  font-weight: bold;
-  text-transform: capitalize;
+.footer .contact .icon {
+  margin-right: 0.5rem; /* Spacing between icon and text */
+  vertical-align: middle; /* Align icons with text */
 }
 
-.opening_hours td:last-child {
-  text-align: right;
+.footer .emailLink {
+  color: whitesmoke;
+  text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .footer_content {
-    flex-direction: column;
-  }
-
-  .company_info,
-  .about,
-  .follow_us,
-  .opening_hours {
-    width: 100%;
-  }
+.footer .emailLink:hover {
+  text-decoration: underline;
 }
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 2rem;
-  font-family: Arial, sans-serif;
+.comp_deco{
+  border-right: 1px dashed whitesmoke;
+  border-left: 1px dashed whitesmoke;
 }
 
-.footer_content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.footer .description {
+  font-size: 1rem; /* Increased font size for readability */
+  line-height: 1.5; /* Improved line height for readability */
 }
 
-.footer_content div {
-  width: calc(25% - 1rem);
-  margin-bottom: 2rem;
-}
-
-h3 {
-  font-size: 1.2rem;
+.footer .logo {
+  max-width: 200px; /* Increased max-width for the logo */
   margin-bottom: 1rem;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.footer .productList {
+  list-style: none;
+  padding: 0;
 }
 
-td {
-  padding: 0.5rem;
-  border-bottom: 1px solid #555;
+.footer .productList li {
+  margin: 0.75rem 0; /* Increased margin for spacing */
+  font-size: 1rem; /* Improved readability */
 }
 
-td:first-child {
-  /* font-weight: bold; */
-  text-transform: capitalize;
+.footer .tableText {
+  color: #ffffff; /* Ensure table text is light */
 }
 
-td:first-child svg {
-  margin-right: 0.5rem;
-  /* vertical-align: middle; */
+.text-center {
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-  .footer_content {
-    flex-direction: column;
-  }
-
-  .footer_content div {
-    width: 100%;
+  .footer .contact,
+  .footer .productList,
+  .footer .description,
+  .footer .tableText {
+    text-align: center;
   }
 }

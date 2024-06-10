@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffff;
+  color: whitesmoke;
   gap: 10px;
   font-weight: bold;
   border: 3px solid #ffffff4d;
@@ -110,7 +110,7 @@
   width: 100vw;
   left: 5%;
   height: 100vh;
-  color: #fff;
+  color: var(--text-color);
   opacity: 1;
   z-index: 2;
 }

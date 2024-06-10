@@ -7,11 +7,12 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FiTarget } from "react-icons/fi";
 import { TbTargetArrow } from "react-icons/tb";
 import { GiTargetShot } from "react-icons/gi";
-import "./About.css"; // Custom CSS file for additional styling
+import Styles from "./About.module.css"; // Custom CSS file for additional styling
 import aboutHeadImg from "../../Assets/Pics/abouthead.jpeg";
 import teamImg from "../../Assets/Pics/ourMission.jpeg"; // Replace with your image path
 import AboutHeader from "../../Components/AboutHeader/AboutHeader";
-
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 const About = () => {
   const Trainers = [
     {
@@ -38,10 +39,10 @@ const About = () => {
   ];
   return (
     <>
-      <section className="about-header">
+      <section className={Styles.about_header}>
         <h1>About Us</h1>
       </section>
-      <section className="after-header">
+      <section className={Styles.after_header}>
         <Container>
           <Row>
             <Col md={6}>
@@ -65,71 +66,56 @@ const About = () => {
               <img
                 src={aboutHeadImg}
                 alt="Journey to Learn"
-                className="afterHead_img"
+                className={Styles.afterHead_img}
               />
             </Col>
           </Row>
         </Container>
       </section>
 
-      <section className="our-trainers">
-        <h1>Our Best Trainers</h1>
-        <Container className="mt-5">
-          <Row className="justify-content-center">
-            {Trainers.map((trainer) => (
-              <Col md={4}>
-                <Card className="team-card">
-                  <Card.Img
-                    variant="top"
-                    src={trainer.Avatar}
-                    className="team-image"
-                  />
-                  <Card.Body>
-                    <Card.Title>{trainer.Name}</Card.Title>
-                    <Card.Text>{trainer.Bio}</Card.Text>
-                    <b>Designation: {trainer.Designation}</b>
-                    <p>
-                      <FaFacebookSquare size={30} color="#1eb2b4" />
-                      <FaInstagramSquare size={30} color="#1eb2b4" />
-                      <FaSquareXTwitter size={30} color="#1eb2b4" />
-                    </p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
+      <h1 className="text-center my-4">Our Best Trainers</h1>
+      <section
+        className={`${Styles.ourTrainers} d-flex justify-content-around flex-wrap`}
+      >
+        {Trainers.map((trainer) => {
+          return (
+            <div className={Styles.cardContainer}>
+              <div className={Styles.upperContainer}>
+                <div className={Styles.imageContainer}>
+                  <img src={trainer.Avatar} alt={trainer.name} />
+                </div>
+              </div>
+              <div className={Styles.lowerContainer}>
+                <div>
+                  <h3>{trainer.Name}</h3>
+                  <h4>{trainer.Designation}</h4>
+                </div>
+                <div>
+                  <p>{trainer.Bio}</p>
+                </div>
+                <div className={Styles.socialIcons}>
+                  <FaTwitter className={Styles.icon} />
+                  <FaInstagram className={Styles.icon} />
+                  <FaLinkedin className={Styles.icon} />
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </section>
 
-      {/* <section className="our-portfolio">
-        <h1>Our Portfolio</h1>
-        <div className="portfolio-main">
-                    {[...Array(3)].map((_, idx) => (
-                        <div className="portfolio-row" key={idx}>
-                            <div className="portfolio-column-image">
-                                <img src={aboutHeadImg} alt="Portfolio" className="portfolio-image" />
-                            </div>
-                            <div className="portfolio-column-content">
-                                <h3>My Work</h3>
-                                <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam.</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-      </section> */}
-
-      <section className="tuition-view">
+      <section className={Styles.tuition_view}>
         <Container fluid className="gx-0">
           <Row className="align-items-center">
             <Col md={6} className="p-4">
               <Card>
-                <Card.Body className="tuition-card">
+                <Card.Body className={Styles.tuition_card}>
                   <Card.Title className="mb-4">
                     <h2>Check Out Our Tuition Views</h2>
                   </Card.Title>
-                  <Card.Text className="tuition-card">
-                    <h5 style={{color:"#1EB2B4"}}>
-                      <FiTarget size={30} color="#1EB2B4"/> Our Mission
+                  <Card.Text className={Styles.tuition_card}>
+                    <h5 style={{ color: "#1EB2B4" }}>
+                      <FiTarget size={30} color="#1EB2B4" /> Our Mission
                     </h5>
                     <p>
                       Our mission is to provide quality education of
@@ -137,16 +123,16 @@ const About = () => {
                       respectful, and inclusive environment that builds a
                       foundation for life-long learning.
                     </p>
-                    <h5 style={{color:"#1EB2B4"}}>
-                      <TbTargetArrow size={30} color="#1EB2B4"/> Our Vision
+                    <h5 style={{ color: "#1EB2B4" }}>
+                      <TbTargetArrow size={30} color="#1EB2B4" /> Our Vision
                     </h5>
                     <p>
                       Our vision is for each child to develop a urge to learn,
                       discover their interests and grow in their love of
                       knowledge.
                     </p>
-                    <h5 style={{color:"#1EB2B4"}}>
-                      <GiTargetShot size={30} color="#1EB2B4"/> Director Disk
+                    <h5 style={{ color: "#1EB2B4" }}>
+                      <GiTargetShot size={30} color="#1EB2B4" /> Director Disk
                     </h5>
                     <p>
                       The origin of Solid Tuitions is rooted in the philosophy
@@ -158,8 +144,8 @@ const About = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={6} className="image-container">
-              <Image src={teamImg} fluid className="mission-image" />
+            <Col md={6} className={Styles.image_container}>
+              <Image src={teamImg} fluid className={Styles.mission_image} />
             </Col>
           </Row>
         </Container>

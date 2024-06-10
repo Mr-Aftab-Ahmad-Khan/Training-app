@@ -2,12 +2,11 @@ import React from "react";
 import Img from "../../Assets/Pics/SEO-Optimization-Illustration-min.jpg";
 import Styles from "./Detail.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import courses from "../../Assets/Data/Coursedetail";
 import CourseSlider from "../FeaturedCourses/CourseSlider";
-
 const Detail = () => {
   const { courseId } = useParams(); // Destructure courseId from useParams
   const courseDetail = courses.find((course) => course.id === courseId);
@@ -39,7 +38,8 @@ const Detail = () => {
             <li>Topics Covered</li>
           </ul>
           <small>Course Category :</small>
-          <strong> {courseDetail.Category}</strong>
+          <p><strong> {courseDetail.Category}</strong></p>
+          <Link to='/Courses'>Back to Courses</Link>
         </Col>
       </Row>
 

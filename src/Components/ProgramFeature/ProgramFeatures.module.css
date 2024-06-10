@@ -29,7 +29,7 @@
 .featureTitle {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #0056b3;
+  color:var(--text-color);
   margin-bottom: 0.5rem;
 }
 
