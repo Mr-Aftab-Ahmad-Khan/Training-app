@@ -5,27 +5,26 @@ import Projects from "../../Assets/Data/Projects";
 import Styles from "./ProjectsDetail.module.css";
 
 const ProjectDetail = () => {
-  const { projectId } = useParams(); // Destructure projectId from useParams
-  const project = Projects.find((project) => project.id === projectId);
+  const { projectId } = useParams();
+  const project = Projects.find((project) => project.id == projectId);
   
   if (!project) {
-    return <div>project not found</div>;
+    return <div>Project not found</div>;
   }
 
   return (
-    <Container>
-      <Row className={Styles.space_top}>
-        <Col lg={6} className={Styles.blog_img}>
-          <img src={project.img} alt={project.title} className={Styles.blog_img} />
+    <Container className={Styles.projectDetail}>
+      <Row className={Styles.spaceTop}>
+        <Col lg={6} className={Styles.projectImg}>
+          <img src={project.img} alt={project.title} className={Styles.projectImg} />
         </Col>
-        <Col lg={6} className={`mt-md-4 ${Styles.side_content}`}>
-          <h1 className={Styles.blog_title}>{project.title}</h1>
-          <div className={Styles.blog_description}>
-           
+        <Col lg={6} className={`mt-md-4 ${Styles.sideContent}`}>
+          <h1 className={Styles.projectTitle}>{project.title}</h1>
+          <div className={Styles.projectDescription}>
             <p>{project.description}</p>
           </div>
-          <div className={Styles.blog_category}>
-            <small>Project Category :</small>
+          <div className={Styles.projectCategory}>
+            <small>Project Category:</small>
             <strong> {project.category}</strong>
           </div>
         </Col>

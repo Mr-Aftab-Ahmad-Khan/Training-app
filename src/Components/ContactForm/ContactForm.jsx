@@ -1,13 +1,13 @@
-import React from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './ContactForm.css'; // Custom CSS file for additional styling
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./ContactForm.css"; // Custom CSS file for additional styling
 import { IoHomeSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 
 const ContactForm = () => {
-    return (
+   return (
         <Container className="contact-container">
             <Row className="contact-row">
                 <Col md={6} className="contact-form-section">
@@ -28,10 +28,10 @@ const ContactForm = () => {
                             </Col>
                         </Row>
                         <Row>
-                            <Col md={5} className="mb-3">
+                            <Col md={6} className="mb-3">
                                 <Form.Group controlId="formPhone">
                                     <Form.Label>Phone</Form.Label>
-                                    <Form.Control type="text" placeholder="Phone #" />
+                                    <Form.Control className="hide_arrow" type="number"  minlength="12" maxlength="12" placeholder="+92" />
                                 </Form.Group>
                             </Col>
                             <Col md={6} className="mb-3">
@@ -46,7 +46,7 @@ const ContactForm = () => {
                             <Form.Control as="textarea" rows={3} placeholder="Write your message" />
                         </Form.Group>
                         <Button variant="primary" type="submit" className="send-button">
-                            Send Message
+                            SUBMIT
                         </Button>
                     </Form>
                 </Col>
@@ -59,9 +59,9 @@ const ContactForm = () => {
                         <p><IoMail size={30} /> info@bzsoftech.com</p>
                     </div>
                 </Col>
-            </Row>
-        </Container>
-    );
+      </Row>
+    </Container>
+  );
 };
 
 export default ContactForm;

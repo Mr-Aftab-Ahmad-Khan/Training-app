@@ -5,8 +5,9 @@ import Styles from "./BlogPage.module.css";
 import Blogs from "../../Assets/Data/Blogs";
 import FeaturedPost from "../../Components/FeaturedPosts/FeaturedPost";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaCalendarAlt, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import News from "../../Assets/Data/News";
 
 const BlogPage = () => {
   return (
@@ -43,24 +44,43 @@ const BlogPage = () => {
                 </p>
               </div>
             </div>
+            <section className={Styles.news_section}>
+              <div className={Styles.news_content_wrapper}>
+                {News.map((item, i) => (
+                  <div key={i} className={Styles.news_content}>
+                    <p>
+                      <FaCalendarAlt /> {item.date}
+                    </p>
+                    <p>{item.content}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
           </Col>
-          <Col md={8} >
+          <Col md={8}>
             {Blogs.map((blog) => {
               return (
                 <Col
                   key={blog.id}
-                  lg={12} md={12} sm={12} className={`d-flex ${Styles.blog_card}`}
+                  lg={12}
+                  md={12}
+                  sm={12}
+                  className={`d-flex ${Styles.blog_card}`}
                 >
-                  <img src={blog.imageUrl} alt={blog.BTitle} className={Styles.blog_Img} />
-    <div className={Styles.blog_description}>
-      <b>Category: {blog.BCategory}</b>
-      <p>
-        <b>Published On: {blog.date}</b>
-      </p>
-      <h3>{blog.BTitle}</h3>
-      <Link to={`/BlogDetail/${blog.id}`}>Read More</Link>
-    </div>
-  </Col>
+                  <img
+                    src={blog.imageUrl}
+                    alt={blog.BTitle}
+                    className={Styles.blog_Img}
+                  />
+                  <div className={Styles.blog_description}>
+                    <b>Category: {blog.BCategory}</b>
+                    <p>
+                      <b>Published On: {blog.date}</b>
+                    </p>
+                    <h3>{blog.BTitle}</h3>
+                    <Link to={`/BlogDetail/${blog.id}`}>Read More</Link>
+                  </div>
+                </Col>
               );
             })}
           </Col>

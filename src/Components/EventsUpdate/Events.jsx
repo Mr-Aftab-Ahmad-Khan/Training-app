@@ -4,56 +4,48 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import Styles from "./Events.module.css";
 import AboutImg from "../../Assets/Pics/abouthead.jpeg";
-import EventsData from '../../Assets/Data/EventsData';
+import EventsData from "../../Assets/Data/EventsData";
+import news from "../../Assets/Data/News";
 const Events = () => {
-  const newsItems = [
-    {
-      date: "04-May-2024",
-      content:
-        "Career Institute is affiliated with BISE (Board of Intermediate and Secondary Education) Faisalabad.",
-    },
-    {
-      date: "05-Nov-2024",
-      content:
-        "BZSoftech Institute is affiliated with BISE (Board of Intermediate and Secondary Education) Faisalabad.",
-    },
-    // Add more news items here if needed
-  ];
   return (
     <div>
       <Container>
         <Row className="my-5">
           <Col md={4}>
             <Col md={12}>
-              <h1>Latest <span className={Styles.stamp}>Events</span></h1>
+              <h1>
+                Latest <span className={Styles.stamp}>Events</span>
+              </h1>
               <section className={Styles.events_section}>
-              {EventsData.map((event) => {
-                 return <div className={Styles.events_content}>
-                  <span className={Styles.events_title}>
-                    <b>{event.Month}</b>
-                    <h1>{event.date}</h1>
-                  </span>
-                  <span>
-                    <p>
-                    {event.Content}
-                    </p>
-                    <b>
-                      <FaLocationDot />
-                      {event.location} Pakistan
-                    </b>
-                  </span>
-                </div>
-              })}
+                {EventsData.map((event) => {
+                  return (
+                    <div className={Styles.events_content}>
+                      <span className={Styles.events_title}>
+                        <b>{event.Month}</b>
+                        <h1>{event.date}</h1>
+                      </span>
+                      <span>
+                        <p>{event.Content}</p>
+                        <b>
+                          <FaLocationDot />
+                          {event.location} Pakistan
+                        </b>
+                      </span>
+                    </div>
+                  );
+                })}
               </section>
             </Col>
           </Col>
           <Col md={4}>
             <Col md={12}>
-              <h1>Latest <span className={Styles.stamp}> News</span></h1>
+              <h1>
+                Latest <span className={Styles.stamp}> News</span>
+              </h1>
               <section className={Styles.news_section}>
                 <div className={Styles.news_content_wrapper}>
                   {Array.from({ length: 10 }).map((_, i) =>
-                    newsItems.map((item, index) => (
+                    news.map((item, index) => (
                       <div
                         key={i + "-" + index}
                         className={Styles.news_content}
@@ -71,7 +63,9 @@ const Events = () => {
           </Col>
           <Col md={4}>
             <Col md={12}>
-              <h1>Why <span className={Styles.stamp}> Choose Us</span></h1>
+              <h1>
+                Why <span className={Styles.stamp}> Choose Us</span>
+              </h1>
               <section className={Styles.choose_us_section}>
                 <div className={Styles.choose_us_content}>
                   <img src={AboutImg} alt="" className={Styles.about_img} />

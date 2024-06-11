@@ -1,5 +1,4 @@
-/* CSS Module: BlogPage.module.css */
-
+/* BlogPage.module.css */
 
 .blog_container {
   margin-top: 2rem;
@@ -9,11 +8,11 @@
   height: 300px;
   width: 100%;
   text-align: center;
-  background: var(--primary);
+  background: var(--primary, #007bff); /* Fallback color if CSS variable not defined */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-color);
+  color: var(--text-color, #fff); /* Fallback color if CSS variable not defined */
   font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -38,7 +37,7 @@
 }
 
 .about_author p {
-  color: var(--text-color);
+  color: var(--text-color, #333);
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -50,7 +49,38 @@
   font-size: 1.1rem;
 }
 
-/* YourStyles.module.css */
+.news_section {
+  margin-top: 1.5rem;
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+}
+
+.news_content_wrapper {
+  display: flex;
+  flex-direction: column;
+  animation: scrollNews 50s linear infinite;
+}
+
+.news_content {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+@keyframes scrollNews {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-100% + 480px)); /* Move up by the total height of the content minus the visible height */
+  }
+}
+
+.news_section:hover .news_content_wrapper {
+  animation-play-state: paused;
+}
+
+/* Blog Card Styles */
 .blog_card {
   margin-bottom: 2rem;
   display: flex;

@@ -2,18 +2,19 @@ const Projects = [
   {
     id: "1",
     img: "https://i.ibb.co/30TtJZ8/Dash-Board.png[/img",
-    title: "Automating People Operations with 30+ integrations",
+    title: "ERP Automating People Operations with 30+ integrations",
     description:
       "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
-    category: "HMS",
+    category: "ERP",
   },
+
   {
     id: "2",
     img: "https://i.ibb.co/5KgyTpX/zt6.png",
     title: "Automating People Operations with 30+ integrations",
     description:
       "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
-    category: "POS",
+    category: "FORM",
   },
   {
     id: "3",
@@ -21,7 +22,63 @@ const Projects = [
     title: "Automating People Operations with 30+ integrations",
     description:
       "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
-    category: "Custom",
+    category: "Apex",
+  },
+  {
+    id: "4",
+    img: "https://i.ibb.co/QkXf41x/new-order.png",
+    title: "Automating People Operations with 30+ integrations",
+    description:
+      "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
+    category: "ERP",
+  },
+  {
+    id: "5",
+    img: "https://i.ibb.co/QkXf41x/new-order.png",
+    title: "Automating People Operations with 30+ integrations",
+    description:
+      "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
+    category: "Apex",
+  },
+  {
+    id: "6",
+    img: "https://i.ibb.co/QkXf41x/new-order.png",
+    title: "Automating People Operations with 30+ integrations",
+    description:
+      "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
+    category: "FORM",
+  },
+  {
+    id: "7",
+    img: "https://i.ibb.co/0jL5gDR/salary.png",
+    title: "Automating People Operations with 30+ integrations",
+    description:
+      "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
+    category: "Integration",
+  },
+  {
+    id: "8",
+    img: "https://i.ibb.co/5MWLTQM/sp1.png",
+    title: "Automating People Operations with 30+ integrations",
+    description:
+      "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
+    category: "Integration",
+  },
+  {
+    id: "9",
+    img: "https://i.ibb.co/QkXf41x/new-order.png",
+    title: "Automating People Operations with 30+ integrations",
+    description:
+      "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
+    category: "Migration",
+  },
+  {
+    id: "10",
+    img: "https://i.ibb.co/5KgyTpX/zt6.png",
+    title: "Automating People Operations with 30+ integrations",
+    description:
+      "Sapling enhanced HR operations, rapidly expanded its team, and improved integrations, leading to a successful automation and superior employee experiences.",
+    category: "Migration",
   },
   // Add more project objects as needed
 ];
