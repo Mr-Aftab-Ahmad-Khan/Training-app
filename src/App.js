@@ -5,7 +5,6 @@ import "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "swiper/css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Snow from 'react-quill/dist/quil'
 /////////////////////////////////////////////// importing components and pages

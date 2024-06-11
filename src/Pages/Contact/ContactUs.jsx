@@ -11,7 +11,7 @@ import ContactForm from "../../Components/ContactForm/ContactForm";
 const ContactUs = () => {
   return (
     <div className={Styles.bg_wrapper}>
-     <section className={Styles.contact_header}>
+     <section className={Styles.page_header}>
         <h1>Ways To Connect</h1>
       </section>
       <ContactForm />
