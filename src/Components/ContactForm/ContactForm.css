@@ -1,0 +1,120 @@
+/* Contact Us Container */
+.contact-container {
+  border-radius: 15px;
+  box-shadow: 10px 10px 40px 15px rgba(160, 10, 173, 0.2);
+  max-width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 20px;
+}
+
+/* Contact Row */
+.contact-row {
+  display: flex;
+  width: 100%;
+}
+
+/* Form Section */
+.hide_arrow::-webkit-outer-spin-button,
+.hide_arrow::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.contact-form-section {
+  /* background-color:  */
+  border-radius: 15px;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+  padding: .8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 2;
+  color: #333;
+}
+
+.contact-form-section h3 {
+  color: #149092;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact-form-section .form-label {
+  color: #333;
+  font-weight: bold;
+}
+
+.contact-form-section .form-control {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.contact-form-section .form-control:focus {
+  border-color: #149092;
+  box-shadow: 0 0 5px rgba(20, 144, 146, 0.2);
+}
+
+/* Info Section */
+.contact-info-section {
+  background-color: #149092;
+  color: #ffffff;
+  border-radius: 15px;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.contact-info-section h3 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact-info-section p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info p svg {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+/* Send Button */
+.send-button {
+  background-color: #149092;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.send-button:hover {
+  background-color: #10777d;
+}
+
+@media (max-width: 768px) {
+  .contact-row {
+    flex-direction: column;
+  }
+
+  .contact-form-section,
+  .contact-info-section {
+    margin-bottom: 20px;
+  }
+}

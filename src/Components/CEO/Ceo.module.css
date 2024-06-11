@@ -1,0 +1,56 @@
+/* CSS Module: Ceo.module.css */
+
+:root {
+  /* --primary-color: #007bff; */
+  /* --text-color: #333; */
+}
+
+.bg {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imageCol {
+  text-align: center;
+}
+
+.img {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.text {
+  font-weight: 300;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 1.8rem;
+}
+
+.quote {
+  font-style: italic;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.ceoInfo {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.ceoInfo b {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.ceoInfo p {
+  margin: 0;
+  color: var(--text-color);
+}

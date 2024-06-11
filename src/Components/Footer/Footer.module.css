@@ -1,0 +1,93 @@
+.footer {
+  background-color: #f8f9fa; /* Light theme background */
+  padding: 2rem 0; /* Increased padding for more space */
+  color: #343a40; /* Dark text color for contrast */
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .brandName img {
+  width: 400px; /* Increased width for a larger logo */
+  max-width: 100%;
+  margin-bottom: 1rem; /* Added margin bottom for spacing */
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  padding: 1rem;
+}
+
+.footer .divider {
+  border-top: 1px solid #dee2e6;
+  margin: 1.5rem 0; /* Increased margin for better spacing */
+}
+
+.footer .contact {
+  margin-bottom: 1rem;
+}
+
+.footer .contact h3 {
+  font-size: 1.75rem; /* Increased font size */
+  margin-bottom: 1rem; /* Added margin bottom */
+}
+
+.footer .contact p {
+  margin: 0.75rem 0; /* Increased margin for spacing */
+  font-size: 1rem; /* Improved readability */
+}
+
+.footer .contact .icon {
+  margin-right: 0.5rem; /* Spacing between icon and text */
+  vertical-align: middle; /* Align icons with text */
+}
+
+.footer .emailLink {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.footer .emailLink:hover {
+  text-decoration: underline;
+}
+.comp_deco{
+  border-right: 1px dashed whitesmoke;
+  border-left: 1px dashed whitesmoke;
+}
+
+.footer .description {
+  font-size: 1rem; /* Increased font size for readability */
+  line-height: 1.5; /* Improved line height for readability */
+}
+
+.footer .logo {
+  max-width: 200px; /* Increased max-width for the logo */
+  margin-bottom: 1rem;
+}
+
+.footer .productList {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .productList li {
+  margin: 0.75rem 0; /* Increased margin for spacing */
+  font-size: 1rem; /* Improved readability */
+}
+
+.footer .tableText {
+  color: #ffffff; /* Ensure table text is light */
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer .contact,
+  .footer .productList,
+  .footer .description,
+  .footer .tableText {
+    text-align: center;
+  }
+}

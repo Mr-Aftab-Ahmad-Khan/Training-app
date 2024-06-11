@@ -1,0 +1,45 @@
+.founderContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    height: 12rem;
+    background: linear-gradient(to right, #4db8ff, #4fd2a5);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--text-color);
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+  }
+  
+  .profileImage {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevents the image from shrinking */
+  }
+  
+  .textBlock {
+    font-size: 1rem;
+    line-height: 1.5;
+    flex: 1; /* Allows the text block to grow and take available space */
+    min-width: 200px; /* Ensures the text block has a minimum width */
+  }
+  
+  /* Media Queries */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .profileImage {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
+  
+    .textBlock {
+      font-size: 0.9rem;
+    }
+  }
+  

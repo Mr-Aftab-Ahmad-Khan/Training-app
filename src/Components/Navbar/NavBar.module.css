@@ -1,0 +1,124 @@
+/* NavBar.module.css */
+
+.navbar {
+  padding: 1rem;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.custom-toggler {
+  border-color: #fff;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav_link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.nav_link:hover {
+  color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav_link:nth-child(n + 2) {
+  border-left: 1px solid var(--primary);
+}
+
+.nav_link::before,
+.nav_link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.nav_link::before {
+  top: 0;
+  left: 0;
+}
+
+.nav_link::after {
+  bottom: 0;
+  right: 0;
+}
+
+.nav_link:hover::before,
+.nav_link:hover::after {
+  width: 100%;
+}
+
+.profile_dropdown {
+  margin-left: 1rem;
+}
+
+.profile_toggle {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.profile_icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.user_name {
+  font-size: 1rem;
+}
+
+.dropdown_menu {
+  background: #3d3a4e;
+  color: #fff;
+  border: none;
+}
+
+.dropdown_menu .dropdown-item {
+  color: #fff;
+}
+
+.dropdown_menu .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.login_button {
+  position: relative;
+  overflow: hidden;
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  border-radius: 1.25rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+
+.login_button:hover {
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+}
+
+.button_content {
+  position: relative;
+  z-index: 1;
+}

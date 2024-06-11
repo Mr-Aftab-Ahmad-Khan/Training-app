@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 1000 */
+body{
+  background-color: #F7F7FA !important;
+}
+* {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+:root {
+  /* BG Color */
+  /* --primary: #1eb2b4; */
+  /* --primary: #EEF1FF; */
+  --primary: #e7ecf1;
+  /* --primary: #F7F7FA; */
+  /* Shades/Exectiopnal */
+  --secondary: #2c3532;
+  /* Hover and shuttering */
+  --hover-bg: #ff85c0;
+  /* Font Color */
+  --text-color: #000;
+  /* Heading Color */
+  --heading: #000000;
+}
+.carousel-control-prev, .carousel-control-next{
+  display: none !important;
+}

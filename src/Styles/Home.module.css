@@ -1,0 +1,164 @@
+
+.aluminiContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  overflow: hidden;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  background-color: var(--primary);
+  box-shadow: 4px 4px 20px 0px rgba(223, 222, 221, 0.699);
+  padding: 2rem;
+}
+.aluminiCard {
+  height: 230px;
+  width: 300px;
+  padding: 40px 60px;
+  text-align: center;
+  border-radius: 10px;
+  background: #149092;
+  box-shadow: 4px 4px 20px 0px rgba(13, 207, 207, 0.55);
+  transition: all 0.3s ease-in-out;
+  color: var(--text-color);
+}
+.aluminiCard h1 {
+  color: whitesmoke;
+  padding: 1rem;
+}
+/* ==============================================================Event */
+.event_container {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.event_container h1 {
+  text-align: center;
+  margin: 1rem 0rem !important
+}
+.event_card{
+  padding-top: 1rem;
+}
+.event_date {
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+}
+.event_date h1 {
+  font-size: 4rem;
+  color: var(--primary);
+}
+.event_date p {
+  margin: 0;
+  color: var(--primary);
+}
+.event_details {
+  background-color:var(--primary);
+  color: var(--text-color);
+  padding: 10px;
+}
+.event_details h5 {
+  color: var(--text-color);
+}
+.event_details p {
+  color: var(--text-color);
+}
+.img_fluid {
+  object-fit: cover;
+  width: 100%;
+}
+.event_details .more_link {
+  color: var(--heading);
+  text-decoration: none;
+}
+.event_details .more_link:hover {
+  text-decoration: underline;
+}
+
+.motive_img {
+  border-radius: 7px;
+}
+/* ===========================================================home_courses*/
+.home_courses {
+  padding: 1.5rem 0rem;
+  margin-bottom: 1rem;
+}
+
+.heading_wrapper {
+  /* width: 100%; Full viewport width */
+  /* background-color: var(--primary); */
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Subtle shadow for depth */
+}
+
+.heading_wrapper h1 {
+  margin: 0;
+  color: #4F4F4F;
+  /* font-size: 3rem; */
+  /* font-weight: bold; */
+  letter-spacing: 1px;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  .heading_wrapper h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===========================================================excellence */
+.excellence_Wrapper {
+  margin-top: 1rem;
+  background-color: var(--primary);
+  color: var(--text-color);
+  padding: 30px;
+}
+
+.content {
+  /* margin-top: 3rem; */
+  justify-content: center;
+}
+
+.text_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text_col h1 {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.image_col {
+  display: flex;
+  align-items: center;
+}
+
+.excellence img {
+  width: 100%;
+  height: auto;
+}
+
+.motive_img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===========================================================Paralax */
+.parallax {
+  background-image: url('https://images.unsplash.com/photo-1508896080210-93c377eb4135?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHRlY2h8ZW58MHwwfDB8fHwy');
+  height: 30vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.testimonal_section h1{
+  text-align: center;
+  padding: 1rem;
+}
