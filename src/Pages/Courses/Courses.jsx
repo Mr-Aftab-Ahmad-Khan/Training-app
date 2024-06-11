@@ -9,7 +9,7 @@ import courses from "../../Assets/Data/Coursedetail";
 const Courses = () => {
   return (
     <div>
-    <section className={Styles.courses_header}>
+    <section className={Styles.page_header}>
         <h1>Featured Courses</h1>
       </section>
       <div className={Styles.wrapper}>

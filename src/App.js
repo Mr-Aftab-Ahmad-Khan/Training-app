@@ -6,14 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-/////////////////////////////////////////////// importing components and pages
-import HeaderInfo from "./Components/Header-Info/HeaderInfo";
-import FeaturedCourses from "./Components/FeaturedCourses/FeaturedCourses";
-import Navbar from "./Components/Navbar/Navbar";
-import Home from "./Pages/Home/Home";
-import ContactUs from "./Pages/Contact/ContactUs";
-import "swiper/css";
-
 // import Snow from 'react-quill/dist/quil'
 /////////////////////////////////////////////// importing components and pages
 import HeaderInfo from "./Components/Header-Info/HeaderInfo";

@@ -12,7 +12,7 @@ import News from "../../Assets/Data/News";
 const BlogPage = () => {
   return (
     <>
-      <section className={Styles.blog_header}>
+      <section className={Styles.page_header}>
         <h1>Trending Posts</h1>
       </section>
       <Container className={Styles.blog_container}>
