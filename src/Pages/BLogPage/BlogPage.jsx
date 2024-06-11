@@ -6,9 +6,9 @@ import Blogs from "../../Assets/Data/Blogs";
 import FeaturedPost from "../../Components/FeaturedPosts/FeaturedPost";
 import { Link } from "react-router-dom";
 import { FaCalendarAlt, FaFacebook, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaLocationDot, FaSquareXTwitter } from "react-icons/fa6";
 import News from "../../Assets/Data/News";
-
+import EventsData from "../../Assets/Data/EventsData";
 const BlogPage = () => {
   return (
     <>
@@ -44,7 +44,8 @@ const BlogPage = () => {
                 </p>
               </div>
             </div>
-            <section className={Styles.news_section}>
+            <h2>Latest News</h2>
+            <section className={`my-5 ${Styles.news_section}`}>
               <div className={Styles.news_content_wrapper}>
                 {News.map((item, i) => (
                   <div key={i} className={Styles.news_content}>
@@ -56,6 +57,31 @@ const BlogPage = () => {
                 ))}
               </div>
             </section>
+
+            <Col md={12}>
+              <h1>
+                Latest <span className={Styles.stamp}>Events</span>
+              </h1>
+              <section className={Styles.events_section}>
+                {EventsData.map((event) => {
+                  return (
+                    <div className={Styles.events_content}>
+                      <span className={Styles.events_title}>
+                        <b>{event.Month}</b>
+                        <h1>{event.date}</h1>
+                      </span>
+                      <span>
+                        <p>{event.Content}</p>
+                        <b>
+                          <FaLocationDot />
+                          {event.location} Pakistan
+                        </b>
+                      </span>
+                    </div>
+                  );
+                })}
+              </section>
+            </Col>
           </Col>
           <Col md={8}>
             {Blogs.map((blog) => {
