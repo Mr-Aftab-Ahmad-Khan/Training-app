@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Training-app/static/css/main.26b22568.css",
-    "main.js": "/Training-app/static/js/main.a0191a52.js",
+    "main.css": "/Training-app/static/css/main.533bd360.css",
+    "main.js": "/Training-app/static/js/main.0ad9b51a.js",
     "static/media/slide1.jpg": "/Training-app/static/media/slide1.4c93885b65f3c96088b2.jpg",
     "static/media/homeSlide3.jpg": "/Training-app/static/media/homeSlide3.d6c1e2fee2af1c70d19d.jpg",
     "static/media/slide2.jpg": "/Training-app/static/media/slide2.9c99dfd02ebce8bc0358.jpg",
@@ -16,6 +16,7 @@
     "static/media/contact.jpeg": "/Training-app/static/media/contact.55596c38622cbcd86685.jpeg",
     "static/media/certification.jpeg": "/Training-app/static/media/certification.bd0ce9e39305e82a728b.jpeg",
     "static/media/lap3.png": "/Training-app/static/media/lap3.3dda73197357660ef219.png",
+    "static/media/question.png": "/Training-app/static/media/question.23cfd5f793d6a4618868.png",
     "static/media/abouthead.jpeg": "/Training-app/static/media/abouthead.79aa0599f8817c3da9d9.jpeg",
     "static/media/successStairs.jpeg": "/Training-app/static/media/successStairs.360c612357a8316faea5.jpeg",
     "static/media/students.jpeg": "/Training-app/static/media/students.8f1e6de05f4c1c5bc88d.jpeg",
@@ -32,11 +33,11 @@
     "static/media/slick.ttf": "/Training-app/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Training-app/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Training-app/index.html",
-    "main.26b22568.css.map": "/Training-app/static/css/main.26b22568.css.map",
-    "main.a0191a52.js.map": "/Training-app/static/js/main.a0191a52.js.map"
+    "main.533bd360.css.map": "/Training-app/static/css/main.533bd360.css.map",
+    "main.0ad9b51a.js.map": "/Training-app/static/js/main.0ad9b51a.js.map"
   },
   "entrypoints": [
-    "static/css/main.26b22568.css",
-    "static/js/main.a0191a52.js"
+    "static/css/main.533bd360.css",
+    "static/js/main.0ad9b51a.js"
   ]
 }
