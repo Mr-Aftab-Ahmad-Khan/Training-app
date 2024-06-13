@@ -1,0 +1,124 @@
+:root {
+  --background-color1: #fafaff;
+  --background-color2: #ffffff;
+  --background-color3: #ededed;
+  --background-color4: #cad7fda4;
+  --primary-color: #4b49ac;
+  --secondary-color: #0c007d;
+  --border-color: #3f0097;
+  --sidebar-background: #343a40;
+  --sidebar-text: #ffffff;
+  --active-tab-background: #495057;
+  --hover-background: #212529;
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  --gradient-background: linear-gradient(135deg, #4b49ac, #0c007d);
+}
+
+.dashboard_container {
+  background-color: var(--background-color1);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.sidebar_container {
+  min-height: 100vh;
+  background-color: var(--sidebar-background);
+  padding: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.nav-option {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: var(--sidebar-text);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-option:hover,
+.nav-option.active {
+  background-color: var(--active-tab-background);
+  border-left: 4px solid var(--primary-color);
+}
+
+.main-content {
+  padding: 20px;
+  background-color: var(--background-color2);
+  overflow-x: hidden;
+}
+
+.box_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.box {
+  flex: 1 1 calc(33.333% - 20px); /* Ensure three cards fit per row */
+  max-width: calc(33.333% - 20px);
+  background: var(--gradient-background);
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  color: var(--background-color2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row; /* Change to row for inline content */
+  align-items: center;
+  text-align: center;
+  justify-content: space-between; /* Ensure even spacing between items */
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+
+.box .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 15px;
+}
+
+.topic-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.topic {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 5px 0 0;
+}
+
+.icon {
+  margin: 0 15px;
+  color: var(--background-color2);
+}
+
+@media (max-width: 992px) {
+  .box {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    flex: 1 1 calc(100% - 20px); /* One card per row on small screens */
+    max-width: calc(100% - 20px);
+  }
+}

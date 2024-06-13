@@ -30,6 +30,22 @@
   font-weight: bold;
 }
 .courseCard {
+
+    width: 400px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 15px 0px; /* Decreased horizontal margin */
+    background: #fafafa;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 0.03rem;; /* Decreased horizontal padding */
+
   width: 400px;
   position: relative;
   box-shadow: 0 2px 7px #dfdfdf;
@@ -42,6 +58,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 0 0.05rem; /* Decreased horizontal padding */
+
 }
 
 .badge {
