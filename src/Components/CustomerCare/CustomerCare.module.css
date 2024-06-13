@@ -1,0 +1,77 @@
+.care_container {
+  margin-top: 1rem;
+  background-color: #b756e1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2rem;
+  border-radius: 1rem; /* Rounded corners for container */
+}
+
+.care_content {
+  /* padding: 2rem 0; */
+  text-align: center;
+  border-left: 1px solid whitesmoke;
+}
+
+.care_deco {
+  /* border-left: 2px solid whitesmoke; */
+  text-align: center;
+  padding-left: 1rem;
+}
+.care_content > p{
+    font-size: 1.5rem;
+    padding-left: 5rem;
+    color: whitesmoke;
+    margin-bottom: -1rem;
+}
+.bar{
+    border-left: 1px solid wheat;
+    height: 82px;
+    position: relative;
+    left: -12rem;
+    top: 8rem;
+    display: inline-block;
+}
+.care_content Button{
+    margin-left: 1rem;
+    margin-left:4rem;
+    border-radius: 1rem;
+}
+.care_deco h1 {
+  background-color: #fff;
+  padding: .1rem;
+  border-radius: 2rem;
+  color: #b756e1;
+  max-width: 430px;
+  width: 100%;
+  margin-left: 12rem ;
+  font-weight: 900;
+}
+.care_deco p{
+    max-width: 430px;
+    width: 100%;
+    margin-left: 12rem ;
+    
+}
+.care_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px; /* Perspective for 3D effect */
+  position: relative; /* Allows the shadow to be positioned */
+  padding: 1rem; /* Add padding inside the shadow */
+
+  border-radius: 50%; /* Make container round */
+  
+}
+
+.care_img img {
+  transform: rotateY(-35deg) rotateX(20deg); /* Combined transform for 3D tilt */
+  max-height: 500px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Keep image circular */
+  transition: transform 0.5s; /* Smooth transition on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow around the image */
+}
+

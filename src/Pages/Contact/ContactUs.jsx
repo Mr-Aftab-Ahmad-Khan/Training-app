@@ -8,6 +8,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { GoClockFill } from "react-icons/go";
 import ContactForm from "../../Components/ContactForm/ContactForm";
+import CustomerCare from "../../Components/CustomerCare/CustomerCare";
 const ContactUs = () => {
   return (
     <div className={Styles.bg_wrapper}>
@@ -16,21 +17,8 @@ const ContactUs = () => {
       </section>
       <ContactForm />
 
-      <Container className={Styles.contact_banner}>
-        <Row>
-          <Col lg={4} >
-            <img src={Avatar} alt="" />
-          </Col>
-          <Col lg={6} className={Styles.padder}>
-            <p>
-              WE REALIZE THAT YOU LEAD A BUSY LIFE, SO WE HAVE MADE IT EASY FOR
-              YOU TO DROP OFF YOUR VEHICLE 24/7.
-            </p>
-            <h2>
-              <IoCall /> +92-304-20434-34
-            </h2>
-          </Col>
-        </Row>
+      <Container >
+     <CustomerCare/>
       </Container>
 
       <Container fluid className={Styles.connect_section}>

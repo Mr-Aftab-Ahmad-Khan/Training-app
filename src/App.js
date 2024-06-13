@@ -5,7 +5,7 @@ import "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes,Navigate  } from "react-router-dom";
 // import Snow from 'react-quill/dist/quil'
 /////////////////////////////////////////////// importing components and pages
 import HeaderInfo from "./Components/Header-Info/HeaderInfo";
@@ -38,6 +38,7 @@ function App() {
           <Route path="/Detail/:courseId" element={<Detail />} />
           <Route path="/BlogDetail/:blogId" element={<BlogDetail />} />
           <Route path="/ProjectDetail/:projectId" element={<ProjectDetail />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
       </Router>
