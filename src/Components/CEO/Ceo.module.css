@@ -1,10 +1,90 @@
-/* CSS Module: Ceo.module.css */
-
-:root {
-  /* --primary-color: #007bff; */
-  /* --text-color: #333; */
+.ceo_container {
+  padding-top: 2rem;
+  /* margin-top: 1rem; */
+  /* border-radius: 2rem; */
+  max-width: 97vw !important;
+  width: 100%;
+}
+.ceo_container h1 {
+  /* padding:1rem 1rem 1rem -1rem; */
+  font-size: 3rem;
+}
+.ceo {
+  background-color: #e7ecf1;
+  padding: 2.7rem 0.3rem 0 0.3rem;
+}
+.message {
+  background-color: #e7ecf1;
+  padding-left: 1.5rem;
+  border-bottom: 1px solid gray;
+}
+.img_style {
+  height: 600px;
+  width: 80%;
+  margin-left: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.img_container {
+  position: relative;
+}
+.ceo_message {
+  max-width: 60vw;
+}
+.bar_1 {
+  height: 150px;
+  width: 40px;
+  background-color: #e7ecf1;
+  position: absolute;
+  top: 26px;
+  left: 60px;
+}
+.bar_2 {
+  height: 150px;
+  width: 40px;
+  background-color: #e7ecf1;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.title {
+  margin-top: 5rem;
+  background-color: #e7ecf1;
+  text-align: center;
+}
+.ceo_message {
+  padding: 0.5rem 2rem 0 2rem;
+  line-height: 2.5rem;
+  text-align: justify;
+}
+.ceo_footer{
+  display: block;
+  margin-top: 3rem;
+  padding-right:  3rem;
+text-align: right;
+}
+.ceo_footer p{
+  font-style: italic;
+}
+/* CSS Module: Ceo.module.css
+
+:root {
+  --primary-color: #007bff;
+  --text-color: #333;
+}
+
+.heading{
+  text-align: center;
+  color: black;
+}
+.message{
+  border: 3px solid black;
+  text-align: center;
+  background-color: rgb(30, 65, 32);
+  width: 600px;
+}
 .bg {
   background-color: #f8f9fa;
   padding: 2rem;
@@ -17,7 +97,7 @@
 }
 
 .img {
-  height: 400px;
+  height: 600px;
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
@@ -36,7 +116,7 @@
 .quote {
   font-style: italic;
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .ceoInfo {
@@ -53,4 +133,4 @@
 .ceoInfo p {
   margin: 0;
   color: var(--text-color);
-}
+} */

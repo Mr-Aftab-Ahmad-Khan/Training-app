@@ -11,8 +11,8 @@ import ProjectsTab from "../../Components/Projects/ProjectsTab";
 const Services = () => {
   return (
     <div>
-      <section className={Styles.services_header}>
-        <h1>Services We Offer</h1>
+     <section className={Styles.page_header}>
+        <h1>Our Portfolio</h1>
       </section>
       <div className={Styles.bgc}>
         <ProductSlider />

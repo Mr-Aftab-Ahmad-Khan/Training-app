@@ -19,7 +19,7 @@ const About = () => {
   
   return (
     <>
-      <section className={Styles.about_header}>
+     <section className={Styles.page_header}>
         <h1>About Us</h1>
       </section>
       <section className={Styles.after_header}>
