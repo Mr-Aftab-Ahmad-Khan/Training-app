@@ -1,199 +1,145 @@
-import React, { useEffect, useState } from "react";
-import styles from "./Dashboard.module.css";
-import { GrDashboard } from "react-icons/gr";
-import { MdEmojiEvents } from "react-icons/md";
-import { FaUserTie } from "react-icons/fa";
-import { SiBlogger } from "react-icons/si";
-import { Table, Form, Button, Row, Col } from "react-bootstrap";
-import Users from "../../Assets/Data/Users";
+import React, { useState } from "react";
+import "./Dashboard.css";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import { Container, Row, Col } from "react-bootstrap";
+import { RiDashboardHorizontalFill } from "react-icons/ri";
+import { MdEmojiEvents, MdNewspaper, MdPerson, MdSchool } from "react-icons/md";
+import { PiStudentFill } from "react-icons/pi";
+import { FaBookOpen } from "react-icons/fa6";
+import { FaBlogger } from "react-icons/fa";
+import NewsCrud from "./NewsCrud";
+
+// ====================================================Admin Data
+import Blogs from '../../Assets/Data/Blogs'
+import Coursedetail from '../../Assets/Data/Coursedetail'
+import EventsData from '../../Assets/Data/EventsData'
+import news from '../../Assets/Data/News'
+import Trainers from '../../Assets/Data/Trainers'
+import EventsCrud from "./EventsCrud";
 
 const Dashboard = () => {
-  useEffect(() => {
-    document.getElementById("defaultOpen").click();
-  }, []);
+  const [activeTab, setActiveTab] = useState(0);
 
-  const [trainers, setTrainers] = useState(Users);
-  const [editTrainerId, setEditTrainerId] = useState(null);
-  const [newTrainer, setNewTrainer] = useState({ Name: "", expertise: "", mail: "", contact: "" });
-
-  const openTab = (evt, tabName) => {
-    const tabcontent = document.getElementsByClassName(styles.eventCrud);
-    for (let i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    const tablinks = document.getElementsByClassName(styles.tablinks);
-    for (let i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+  const handleTabClick = (tabIndex) => {
+    setActiveTab(tabIndex);
   };
-
-  const handleEditTrainer = (id) => {
-    const trainerToEdit = trainers.find((trainer) => trainer.id === id);
-    setNewTrainer({ ...trainerToEdit }); // Include all fields for editing
-    setEditTrainerId(id);
-  };
-
-  const handleDeleteTrainer = (id) => {
-    const updatedTrainers = trainers.filter((trainer) => trainer.id !== id);
-    setTrainers(updatedTrainers);
-  };
-
-  const handleChangeTrainer = (e) => {
-    const { name, value } = e.target;
-    setNewTrainer((prevTrainer) => ({
-      ...prevTrainer,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmitTrainer = () => {
-    // Check if any field is empty
-    if (Object.values(newTrainer).some((val) => val === "")) {
-      alert("Please fill in all fields.");
-      return;
-    }
-
-    if (editTrainerId) {
-      setTrainers((prevTrainers) =>
-        prevTrainers.map((trainer) =>
-          trainer.id === editTrainerId ? { ...newTrainer, id: editTrainerId } : trainer
-        )
-      );
-      setEditTrainerId(null);
-    } else {
-      setTrainers((prevTrainers) => [
-        ...prevTrainers,
-        { id: prevTrainers.length + 1, ...newTrainer },
-      ]);
-    }
-    setNewTrainer({ Name: "", expertise: "", mail: "", contact: "" });
-  };
-
-  // Additional states and functions for Blogs and Events...
 
   return (
-    <div className={styles.dashboardContainer}>
-      <div className={styles.tab}>
-        <h4>
-          <GrDashboard size={30} /> Dashboard
-        </h4>
-        <button
-          className={`${styles.tablinks} ${styles.active}`}
-          onClick={(e) => openTab(e, "events")}
-          id="defaultOpen"
-        >
-          <MdEmojiEvents /> Events
-        </button>
-        <button
-          className={styles.tablinks}
-          onClick={(e) => openTab(e, "trainers")}
-        >
-          <FaUserTie /> Trainer
-        </button>
-        <button
-          className={styles.tablinks}
-          onClick={(e) => openTab(e, "blogs")}
-        >
-          <SiBlogger /> Blog
-        </button>
-      </div>
-
-      <div id="events" className={`${styles.eventCrud} ${styles.active}`}>
-        {/* Event CRUD section */}
-      </div>
-{/* ================================================================================ */}
-      <div id="trainers" className={styles.eventCrud}>
-  <Row className="mt-3">
-    <Col xs={12}>
-      <Form>
-        <Form.Group as={Row} controlId="formName">
-          <Form.Label column sm="2">
-            Name
-          </Form.Label>
-          <Col sm="5">
-            <Form.Control
-              type="text"
-              name="Name"
-              value={newTrainer.Name}
-              onChange={handleChangeTrainer}
-            />
-          </Col>
-        </Form.Group>
-        <Form.Group as={Row} controlId="formMail">
-          <Form.Label column sm="2">
-            Mail
-          </Form.Label>
-          <Col sm="5">
-            <Form.Control
-              type="text"
-              name="mail"
-              value={newTrainer.mail}
-              onChange={handleChangeTrainer}
-            />
-          </Col>
-        </Form.Group>
-        <Form.Group as={Row} controlId="formExpertise">
-          <Form.Label column sm="2">
-            Expertise
-          </Form.Label>
-          <Col sm="5">
-            <Form.Control
-              type="text"
-              name="expertise"
-              value={newTrainer.expertise}
-              onChange={handleChangeTrainer}
-            />
-          </Col>
-        </Form.Group>
-        {/* Add similar Form.Group for other fields */}
-        <Button variant="success" onClick={handleSubmitTrainer}>
-          {editTrainerId ? "Update" : "Create"}
-        </Button>
-      </Form>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Expertise</th>
-            <th>Mail</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {trainers.map((trainer) => (
-            <tr key={trainer.id}>
-              <td>{trainer.Name}</td>
-              <td>{trainer.expertise}</td>
-              <td>{trainer.mail}</td>
-              <td>
-                <Button
-                  variant="warning"
-                  onClick={() => handleEditTrainer(trainer.id)}
-                >
-                  Edit
-                </Button>
-                <Button
-                  variant="danger"
-                  onClick={() => handleDeleteTrainer(trainer.id)}
-                >
-                  Delete
-                </Button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-    </Col>
-  </Row>
-</div>
-
-
-      <div id="blogs" className={styles.eventCrud}>
-        {/* Blog CRUD section */}
-      </div>
-    </div>
+    <Container fluid className="dashboard_container">
+      <Row>
+        <Col sm={2} className="sidebar_container">
+          <TabList className="sidebar">
+            <Tab
+              onClick={() => handleTabClick(0)}
+              className={`nav-option option ${activeTab === 0 ? "active" : ""}`}
+            >
+              <RiDashboardHorizontalFill size={24} /> Dashboard
+            </Tab>
+            <Tab
+              onClick={() => handleTabClick(1)}
+              className={`nav-option option ${activeTab === 1 ? "active" : ""}`}
+            >
+              <MdEmojiEvents size={24} /> Events
+            </Tab>
+            <Tab
+              onClick={() => handleTabClick(2)}
+              className={`nav-option option ${activeTab === 2 ? "active" : ""}`}
+            >
+              <MdNewspaper size={24} /> News
+            </Tab>
+            <Tab
+              onClick={() => handleTabClick(3)}
+              className={`nav-option option ${activeTab === 3 ? "active" : ""}`}
+            >
+              <MdPerson size={24} /> Trainer
+            </Tab>
+            <Tab
+              onClick={() => handleTabClick(4)}
+              className={`nav-option option ${activeTab === 4 ? "active" : ""}`}
+            >
+              <MdSchool size={24} /> Courses
+            </Tab>
+            <Tab
+              onClick={() => handleTabClick(5)}
+              className={`nav-option option ${activeTab === 5 ? "active" : ""}`}
+            >
+              <FaBlogger size={24}/> Blogs
+            </Tab>
+          </TabList>
+        </Col>
+        <Col sm={10} className="main-content">
+          <Tabs
+            selectedIndex={activeTab}
+            onSelect={(index) => handleTabClick(index)}
+          >
+            <TabPanel>
+              <div id="dashboard" className="tab-content">
+                <div className="box_container">
+                  <div className="box box1">
+                    <div className="text">
+                      <h2 className="topic-heading">{(Blogs.length)}</h2>
+                      <h2 className="topic">Blogs</h2>
+                    </div>
+                    <FaBlogger size={70}/>
+                  </div>
+                  <div className="box box2">
+                    <div className="text">
+                      <h2 className="topic-heading">{Trainers.length}</h2>
+                      <h2 className="topic">Trainer</h2>
+                    </div>
+                    <MdPerson size={70} />
+                  </div>
+                  <div className="box box3">
+                    <div className="text">
+                      <h2 className="topic-heading">{news.length} </h2>
+                      <h2 className="topic">News </h2>
+                    </div>
+                    <MdNewspaper size={70} />
+                  </div>
+                  <div className="box box4">
+                    <div className="text">
+                      <h2 className="topic-heading">200</h2>
+                      <h2 className="topic">Students</h2>
+                    </div>
+                    <PiStudentFill size={70} />
+                  </div>
+                  <div className="box box5">
+                    <div className="text">
+                      <h2 className="topic-heading">{Coursedetail.length}</h2>
+                      <h2 className="topic">Courses</h2>
+                    </div>
+                    <FaBookOpen size={70} />
+                  </div>
+                  <div className="box box6">
+                    <div className="text">
+                      <h2 className="topic-heading">{EventsData.length}</h2>
+                      <h2 className="topic">Events</h2>
+                    </div>
+                    <MdEmojiEvents size={70} />
+                  </div>
+                </div>
+              </div>
+            </TabPanel>
+            <TabPanel>
+             <EventsCrud/>
+            </TabPanel>
+            <TabPanel>
+              <NewsCrud/>
+            </TabPanel>
+            <TabPanel>
+              <h2>Tab content for Trainer</h2>
+            </TabPanel>
+            <TabPanel>
+              <h2>Tab content for Courses</h2>
+            </TabPanel>
+            <TabPanel>
+              <h2>Tab content for Blogs</h2>
+            </TabPanel>
+          </Tabs>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

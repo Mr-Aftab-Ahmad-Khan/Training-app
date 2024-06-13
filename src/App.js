@@ -22,12 +22,20 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import BlogDetail from "./Components/Detail/BlogDetail";
 import ProjectDetail from "./Components/Detail/ProjectDetail";
 import Services from "./Pages/Services/Services";
+import Support from "./Components/support/Support";
+import { useEffect } from "react";
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="App">
       <HeaderInfo />
       <Router>
-        <ModernNavbar />
+      <ModernNavbar />
+       {/* {path="/admin" ? '' : }  */}
+        <Support/>
         <Routes>
           <Route path="/admin" element={<Dashboard />} />
           <Route path="/" element={<Home />} />

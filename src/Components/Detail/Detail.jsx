@@ -1,33 +1,33 @@
 import React from "react";
-import Img from "../../Assets/Pics/SEO-Optimization-Illustration-min.jpg";
-import Styles from "./Detail.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import courses from "../../Assets/Data/Coursedetail";
-import CourseSlider from "../FeaturedCourses/CourseSlider";
+import Styles from "./Detail.module.css";
+
 const Detail = () => {
-  const { courseId } = useParams(); // Destructure courseId from useParams
+  const { courseId } = useParams();
   const courseDetail = courses.find((course) => course.id === courseId);
+
   if (!courseDetail) {
     return <div>Course not found</div>;
   }
+
   return (
-    <>
-    <Container >
-      <Row className={Styles.space_top} >
+    <Container>
+      <Row className={Styles.space_top}>
         <Col lg={6} className={Styles.course_img}>
-          <img src={courseDetail.img} alt=""  />
+          <img src={courseDetail.img} alt={courseDetail.title} />
         </Col>
         <Col lg={5} className="side-content mt-md-4">
-          <h2 className={Styles.underborder}>{courseDetail.title} </h2>
+          <h2 className={Styles.underborder}>{courseDetail.title}</h2>
           <hr className={Styles.headingLine} />
-          <p className={Styles.fontSizer}>
+          <div className={Styles.fontSizer}>
             <h3>Course Description</h3>
             <p>{courseDetail.Desc}</p>
-          </p>
-          <h5> Features:</h5>
+          </div>
+          <h5>Features:</h5>
           <ul className={Styles.featuresList}>
             <li>
               <FaChalkboardTeacher /> {courseDetail.enviroment}
@@ -38,14 +38,20 @@ const Detail = () => {
             <li>Topics Covered</li>
           </ul>
           <small>Course Category :</small>
-          <p><strong> {courseDetail.Category}</strong></p>
-          <Link to='/Courses'>Back to Courses</Link>
+          <p><strong>{courseDetail.Category}</strong></p>
+          <Link to="/Courses">Back to Courses</Link>
+          <p></p>
+          <Link
+            to={{
+              pathname: "/ContactUs",
+              search: `?id=${courseDetail.id}&title=${courseDetail.title}`
+            }}
+          >
+            Enroll Now
+          </Link>
         </Col>
       </Row>
-
     </Container>
-     
-      </>
   );
 };
 

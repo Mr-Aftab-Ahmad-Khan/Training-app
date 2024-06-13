@@ -4,7 +4,7 @@ const courses = [
     'img': "https://career.edu.pk/storage/websiteadmin/XOeobF6jUR74qUUD92bhUYKd3dZFZcV1gYKuquyg.jpg",
     'title': "Video Editing",
     'Desc':'Investociety is a global community for investors as their name suggests. Join this community of investors and be part of the community! Engage with your friends and with other investors, discuss stocks and your investments, inform yourself about stocks, read news about stocks and discover new stocks and trading strategies',
-    'Category': "V'id'eo",
+    'Category': "Video",
     'duration': "12 Weeks",
     'enviroment': "online",
   },
