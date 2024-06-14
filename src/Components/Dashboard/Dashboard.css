@@ -16,15 +16,16 @@
 
 .dashboard_container {
   background-color: var(--background-color1);
-  min-height: 100vh;
+  max-height: 90vh;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .sidebar_container {
-  min-height: 100vh;
-  background-color: var(--sidebar-background);
+  min-height: 100%;
+  background-color:#332D2D;
   padding: 0;
 }
 
@@ -65,21 +66,38 @@
 }
 
 .box {
-  flex: 1 1 calc(33.333% - 20px); /* Ensure three cards fit per row */
-  max-width: calc(33.333% - 20px);
-  background: var(--gradient-background);
-  border-radius: 15px;
-  box-shadow: var(--box-shadow);
-  padding: 20px;
-  color: var(--background-color2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 200px;
+  height: 100px;
+  /* padding-left: -10px; */
+  border-radius: 10px;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
   display: flex;
-  flex-direction: row; /* Change to row for inline content */
-  align-items: center;
-  text-align: center;
-  justify-content: space-between; /* Ensure even spacing between items */
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
 }
 
+.box:nth-child(even) {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.glossy-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: -25px;
+  right: -25px;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .box:hover {
   transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
@@ -89,11 +107,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 15px;
+  margin: 1.2rem -2.5rem;
+  
 }
 
 .topic-heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0;
 }
@@ -102,6 +121,7 @@
   font-size: 1.2rem;
   font-weight: 400;
   margin: 5px 0 0;
+  
 }
 
 .icon {

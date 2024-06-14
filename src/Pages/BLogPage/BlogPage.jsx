@@ -71,7 +71,7 @@ const BlogPage = () => {
                         <h1>{event.date}</h1>
                       </span>
                       <span>
-                        <p>{event.Content}</p>
+                        <p>{event.content}</p>
                         <b>
                           <FaLocationDot />
                           {event.location} Pakistan

@@ -63,7 +63,7 @@
 .news_content_wrapper {
   display: flex;
   flex-direction: column;
-  animation: scrollNews 50s linear infinite;
+  animation: scrollNews 120s linear infinite;
 }
 
 .news_content {

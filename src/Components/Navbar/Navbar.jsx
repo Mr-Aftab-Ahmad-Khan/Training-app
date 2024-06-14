@@ -32,11 +32,9 @@ const ModernNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             {/* Admin Role Check */}
-            {isAdmin && (
               <Link to="/admin" className={Styles.nav_link}>
                 Dashboard
               </Link>
-            )}
 
             <Link to="/" className={Styles.nav_link}>
               Home

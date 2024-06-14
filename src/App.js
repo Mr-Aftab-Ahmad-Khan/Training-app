@@ -1,13 +1,10 @@
-import logo from "./logo.svg";
-/////////////////////////////////////////////// importing Lib and modules
+import React, { useEffect } from "react";
 import "./App.css";
 import "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Routes,Navigate  } from "react-router-dom";
-// import Snow from 'react-quill/dist/quil'
-/////////////////////////////////////////////// importing components and pages
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import HeaderInfo from "./Components/Header-Info/HeaderInfo";
 import ModernNavbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
@@ -22,19 +19,20 @@ import BlogDetail from "./Components/Detail/BlogDetail";
 import ProjectDetail from "./Components/Detail/ProjectDetail";
 import Services from "./Pages/Services/Services";
 import Support from "./Components/support/Support";
-import { useEffect } from "react";
+
 function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
-    <div className="App">
-      <HeaderInfo />
-      <Router>
-      <ModernNavbar />
-       {/* {path="/admin" ? '' : }  */}
-        <Support/>
+  const MainContent = () => {
+    const location = useLocation();
+    const isAdminRoute = location.pathname.startsWith("/admin");
+
+    return (
+      <>
+        <ModernNavbar />
+        {!isAdminRoute && <Support />}
         <Routes>
           <Route path="/admin" element={<Dashboard />} />
           <Route path="/" element={<Home />} />
@@ -48,8 +46,15 @@ function App() {
           <Route path="/ProjectDetail/:projectId" element={<ProjectDetail />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <Footer />
-      </Router>
+        {!isAdminRoute && <Footer />}
+      </>
+    );
+  };
+
+  return (
+    <div className="App">
+      <HeaderInfo />
+      <MainContent />
     </div>
   );
 }

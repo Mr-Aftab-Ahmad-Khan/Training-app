@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 const Support = () => {
   return (
+    <Link to="/ContactUs" className={Styles.supportLink}>
     <div className={Styles.support}>
       <img src={SupportIcon} alt="Support Icon" className={Styles.supportIcon} />
-      <Link to="/ContactUs" className={Styles.supportLink}>
         Need Help?
-      </Link>
     </div>
+      </Link>
   );
 };
 
