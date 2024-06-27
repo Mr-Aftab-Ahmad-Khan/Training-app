@@ -1,27 +1,76 @@
-.space_above{
-  margin-top: 3rem;
+.space_above {
+  margin-top: 1rem;
   background-color: #ffff !important;
 }
+
 .carousel-item img {
-  width: 1080px !important; 
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Ensure image takes full width of the container */
+  height: auto; /* Allow height to adjust based on content */
   object-fit: contain; /* Ensures the image fits within the container */
 }
 
-.carousel {
-  width: 1080px;
-  max-width: 100%;
-
-  max-height: 500px; /* Adjust the max height as needed */
-  overflow: hidden;
+.custom_carousel {
+  width: 100%; /* Ensure carousel takes full width */
+  height: auto; /* Allow height to adjust based on content */
 }
 
-.carousel-item {
+.slide_container {
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px; /* Adjust to match the max-height of the carousel */
 }
 
+.img_fluid {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure image covers container */
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
 
+.custom_carousel {
+  width: 100%;
+  max-width: 100%; /* Ensure carousel takes full width of its container */
+  height: 400px; /* Set a fixed height or adjust as needed */
+}
+
+.slide_container {
+  width: 100%;
+  height: 100%; /* Ensure the container takes full height of Carousel item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 780px) {
+  .custom_carousel {
+    margin-bottom: 18rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .carousel-indicators button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    list-style: none;
+    display: none !important;
+    opacity: 0 !important;
+  }
+  .custom_carousel {
+    margin-bottom: -10rem;
+  }
+}

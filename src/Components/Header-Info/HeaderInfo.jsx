@@ -27,10 +27,10 @@ const HeaderInfo = () => {
   return (
     <section>
       <div className={Styles.headerInfo}>
-        <p>
+        <p className={Styles.date}>
           {currentDate}
         </p>
-        <input type="search" placeholder="Search" />
+        <input placeholder="Search" className={Styles.search_input} name="text" type="text"/>
 
         <span className={Styles.social_icons}>
           {/* <b>Follow Us</b> */}

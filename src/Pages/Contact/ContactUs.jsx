@@ -8,7 +8,6 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { GoClockFill } from "react-icons/go";
 import ContactForm from "../../Components/ContactForm/ContactForm";
-import CustomerCare from "../../Components/CustomerCare/CustomerCare";
 const ContactUs = () => {
   return (
     <div className={Styles.bg_wrapper}>
@@ -17,9 +16,7 @@ const ContactUs = () => {
       </section>
       <ContactForm />
 
-      <Container >
-     <CustomerCare/>
-      </Container>
+    
 
       <Container fluid className={Styles.connect_section}>
       <div className={Styles.connect_section}>

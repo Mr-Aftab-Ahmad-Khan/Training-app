@@ -1,8 +1,10 @@
+// Inside your Dashboard component
+
 import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { RiDashboardHorizontalFill } from "react-icons/ri";
 import { MdEmojiEvents, MdNewspaper, MdPerson, MdSchool } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
@@ -18,6 +20,8 @@ import EventsData from "../../Assets/Data/EventsData";
 import news from "../../Assets/Data/News";
 import Trainers from "../../Assets/Data/Trainers";
 import { CanvasJSChart } from "canvasjs-react-charts";
+import { useAuth0 } from "@auth0/auth0-react"; // Import useAuth0 hook from auth0-react
+import axios from 'axios';
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [coursesCount, setCoursesCount] = useState(0);
@@ -25,35 +29,40 @@ const Dashboard = () => {
   const [newsCount, setNewsCount] = useState(0);
   const [trainersCount, setTrainersCount] = useState(0);
   const [siteHealth, setSiteHealth] = useState(80); // Example site health
+  const [searchTerm, setSearchTerm] = useState("");
+ 
+
   // =========================================Chart
-	const optionsPieChart = {
+  const optionsPieChart = {
     exportEnabled: true,
     animationEnabled: true,
     title: {
-      text: "Website Traffic Sources"
+      text: "Website Traffic Sources",
     },
-    data: [{
-      type: "pie",
-      startAngle: 75,
-      toolTipContent: "<b>{label}</b>: {y}%",
-      showInLegend: "true",
-      legendText: "{label}",
-      indexLabelFontSize: 16,
-      indexLabel: "{label} - {y}%",
-      dataPoints: [
-        { y: 18, label: "Direct" },
-        { y: 49, label: "Organic Search" },
-        { y: 9, label: "Paid Search" },
-        { y: 5, label: "Referral" },
-        { y: 19, label: "Social" }
-      ]
-    }]
-  }
+    data: [
+      {
+        type: "pie",
+        startAngle: 75,
+        toolTipContent: "<b>{label}</b>: {y}%",
+        showInLegend: "true",
+        legendText: "{label}",
+        indexLabelFontSize: 16,
+        indexLabel: "{label} - {y}%",
+        dataPoints: [
+          { y: 18, label: "Direct" },
+          { y: 49, label: "Organic Search" },
+          { y: 9, label: "Paid Search" },
+          { y: 5, label: "Referral" },
+          { y: 19, label: "Social" },
+        ],
+      },
+    ],
+  };
 
   const optionsBarChart = {
     animationEnabled: true,
     title: {
-      text: "Totall Enrolled Students",
+      text: "Total Enrolled Students",
       horizontalAlign: "center",
     },
     data: [
@@ -83,6 +92,12 @@ const Dashboard = () => {
     setActiveTab(tabIndex);
   };
 
+  // Function to update search term
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+
   return (
     <Container fluid className="dashboard_container">
       <Row>
@@ -90,40 +105,41 @@ const Dashboard = () => {
           <TabList className="sidebar">
             <Tab
               onClick={() => handleTabClick(0)}
-              className={`nav-option option ${activeTab === 0 ? "active" : ""}`}
+              className={`nav-option ${activeTab === 0 ? "active" : ""}`}
             >
               <RiDashboardHorizontalFill size={24} /> Dashboard
             </Tab>
             <Tab
               onClick={() => handleTabClick(1)}
-              className={`nav-option option ${activeTab === 1 ? "active" : ""}`}
+              className={`nav-option ${activeTab === 1 ? "active" : ""}`}
             >
               <MdEmojiEvents size={24} /> Events
             </Tab>
             <Tab
               onClick={() => handleTabClick(2)}
-              className={`nav-option option ${activeTab === 2 ? "active" : ""}`}
+              className={`nav-option ${activeTab === 2 ? "active" : ""}`}
             >
               <MdNewspaper size={24} /> News
             </Tab>
             <Tab
               onClick={() => handleTabClick(3)}
-              className={`nav-option option ${activeTab === 3 ? "active" : ""}`}
+              className={`nav-option ${activeTab === 3 ? "active" : ""}`}
             >
               <MdPerson size={24} /> Trainer
             </Tab>
             <Tab
               onClick={() => handleTabClick(4)}
-              className={`nav-option option ${activeTab === 4 ? "active" : ""}`}
+              className={`nav-option ${activeTab === 4 ? "active" : ""}`}
             >
               <MdSchool size={24} /> Courses
             </Tab>
             <Tab
               onClick={() => handleTabClick(5)}
-              className={`nav-option option ${activeTab === 5 ? "active" : ""}`}
+              className={`nav-option ${activeTab === 5 ? "active" : ""}`}
             >
               <FaBlogger size={24} /> Blogs
             </Tab>
+           
           </TabList>
         </Col>
         <Col sm={10} className="main-content">
@@ -139,9 +155,7 @@ const Dashboard = () => {
                       <h2 className="topic-heading">{Blogs.length}</h2>
                       <h2 className="topic">Blogs</h2>
                     </div>
-
-                    <div class="glossy-circle">
-                      {" "}
+                    <div className="glossy-circle">
                       <FaBlogger size={35} />
                     </div>
                   </div>
@@ -150,8 +164,7 @@ const Dashboard = () => {
                       <h2 className="topic-heading">{trainersCount}</h2>
                       <h2 className="topic">Trainer</h2>
                     </div>
-
-                    <div class="glossy-circle">
+                    <div className="glossy-circle">
                       <MdPerson size={35} />
                     </div>
                   </div>
@@ -162,9 +175,7 @@ const Dashboard = () => {
                       </h2>
                       <h2 className="topic">News / Events </h2>
                     </div>
-
-                    <div class="glossy-circle">
-                      {" "}
+                    <div className="glossy-circle">
                       <MdNewspaper size={35} />
                     </div>
                   </div>
@@ -173,8 +184,7 @@ const Dashboard = () => {
                       <h2 className="topic-heading">200</h2>
                       <h2 className="topic">Students</h2>
                     </div>
-
-                    <div class="glossy-circle">
+                    <div className="glossy-circle">
                       <PiStudentFill size={35} />
                     </div>
                   </div>
@@ -183,9 +193,7 @@ const Dashboard = () => {
                       <h2 className="topic-heading">{coursesCount}</h2>
                       <h2 className="topic">Courses</h2>
                     </div>
-
-                    <div class="glossy-circle">
-                      {" "}
+                    <div className="glossy-circle">
                       <FaBookOpen size={35} />
                     </div>
                   </div>
@@ -219,6 +227,7 @@ const Dashboard = () => {
             <TabPanel>
               <BlogsCrud />
             </TabPanel>
+            
           </Tabs>
         </Col>
       </Row>

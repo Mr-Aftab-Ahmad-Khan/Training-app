@@ -38,7 +38,7 @@ const Events = () => {
             </Col>
           </Col>
           <Col md={4}>
-            <Col md={12}>
+            <Col md={12} className={Styles.marging}>
               <h1>
                 Latest <span className={Styles.stamp}> News</span>
               </h1>
@@ -62,7 +62,7 @@ const Events = () => {
             </Col>
           </Col>
           <Col md={4}>
-            <Col md={12}>
+            <Col md={12} className={Styles.marging}>
               <h1>
                 Why <span className={Styles.stamp}> Choose Us</span>
               </h1>

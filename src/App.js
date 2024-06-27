@@ -21,12 +21,13 @@ import Services from "./Pages/Services/Services";
 import Support from "./Components/support/Support";
 
 function App() {
+  const location = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [location.pathname]); // Scroll to top whenever location.pathname changes
 
   const MainContent = () => {
-    const location = useLocation();
     const isAdminRoute = location.pathname.startsWith("/admin");
 
     return (

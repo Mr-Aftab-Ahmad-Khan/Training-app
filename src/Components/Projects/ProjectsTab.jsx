@@ -6,7 +6,7 @@ import Projects from "../../Assets/Data/Projects";
 import Styles from "./ProjectsTab.module.css";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function ProjectsTab() {
   const [value, setValue] = React.useState("1");
@@ -29,6 +29,15 @@ export default function ProjectsTab() {
     setValue(newValue);
   };
 
+  // Function to handle tab navigation with arrows
+  const handleNavClick = (direction) => {
+    const currentIndex = parseInt(value, 10);
+    let nextIndex = currentIndex + direction;
+    if (nextIndex < 1) nextIndex = 5; // Circular navigation from the last to the first tab
+    if (nextIndex > 5) nextIndex = 1; // Circular navigation from the first to the last tab
+    setValue(nextIndex.toString());
+  };
+
   return (
     <Container>
       <h1 className="text-center mt-5 pt-3">Our Work</h1>
@@ -36,10 +45,12 @@ export default function ProjectsTab() {
         <Col>
           <Box sx={{ width: "100%", typography: "body1" }}>
             <TabContext value={value}>
-              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <Box sx={{ borderBottom: 1, borderColor: "divider", position: "relative" }}>
                 <TabList
                   onChange={handleChange}
                   aria-label="lab API tabs example"
+                  variant="scrollable"
+                  scrollButtons="auto" // Enable scroll buttons for tabs
                 >
                   <Tab label="ERP" value="1" />
                   <Tab label="Oracle form Development" value="2" />
@@ -47,6 +58,17 @@ export default function ProjectsTab() {
                   <Tab label="Migration Oracle Form to APEX" value="4" />
                   <Tab label="Integration" value="5" />
                 </TabList>
+                {/* Navigation arrows */}
+                <div className={Styles.nav_arrows}>
+                  <FaArrowLeft
+                    className={`${Styles.nav_arrow} ${Styles.left}`}
+                    onClick={() => handleNavClick(-1)}
+                  />
+                  <FaArrowRight
+                    className={`${Styles.nav_arrow} ${Styles.right}`}
+                    onClick={() => handleNavClick(1)}
+                  />
+                </div>
               </Box>
               <TabPanel value="1">
                 <div className={Styles.project_card_holder}>
@@ -208,3 +230,4 @@ export default function ProjectsTab() {
     </Container>
   );
 }
+

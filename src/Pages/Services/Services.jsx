@@ -4,17 +4,16 @@ import ServiceCard from "../../Components/ServicesCard/ServicesCard";
 import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
 import Styles from "./Services.module.css";
 import Projects from "../../Assets/Data/Projects";
-// import ProjectImg from '../../Assets/Portfolio/DashBoard.png'
 import { Link } from "react-router-dom";
 import ProjectsTab from "../../Components/Projects/ProjectsTab";
 
 const Services = () => {
   return (
-    <div>
+    <div className={Styles.overflowHiden}>
      <section className={Styles.page_header}>
         <h1>Our Portfolio</h1>
       </section>
-      <div className={Styles.bgc}>
+      <div>
         <ProductSlider />
       </div>
       <ServiceCard />

@@ -103,36 +103,32 @@ const NewsCrud = () => {
                     <Card className={Styles.card_custom}>
                         <Card.Body>
                             <Form onSubmit={editing ? handleUpdate : handleSubmit} className={Styles.form_custom}>
-                                <Row>
+                                <Row className="mb-3">
                                     <Col md="3">
-                                        <Form.Group className="mb-3">
-                                            <Form.Label className={Styles.form_label}>News ID:</Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                value={newsId}
-                                                onChange={handleInputID}
-                                                required
-                                                isInvalid={!!errorMessage}
-                                                className={Styles.form_control}
-                                            />
-                                            <Form.Control.Feedback type="invalid">
-                                                {errorMessage}
-                                            </Form.Control.Feedback>
-                                        </Form.Group>
+                                        <Form.Label className={Styles.form_label}>News ID:</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            value={newsId}
+                                            onChange={handleInputID}
+                                            required
+                                            isInvalid={!!errorMessage}
+                                            className={Styles.form_control}
+                                        />
+                                        <Form.Control.Feedback type="invalid">
+                                            {errorMessage}
+                                        </Form.Control.Feedback>
                                     </Col>
                                     <Col md="6">
-                                        <Form.Group className="mb-3">
-                                            <Form.Label className={Styles.form_label}>News Description:</Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                value={newsDesc}
-                                                onChange={handleInputDesc}
-                                                required
-                                                className={Styles.form_control}
-                                            />
-                                        </Form.Group>
+                                        <Form.Label className={Styles.form_label}>News Description:</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            value={newsDesc}
+                                            onChange={handleInputDesc}
+                                            required
+                                            className={Styles.form_control}
+                                        />
                                     </Col>
-                                    <Col md="3" className="d-flex align-items-center mt-3">
+                                    <Col md="3" className="d-flex align-items-end">
                                         <Button variant="success" type="submit" className={Styles.submit_button}>
                                             {editing ? "Update" : "Create"}
                                         </Button>
@@ -147,28 +143,23 @@ const NewsCrud = () => {
                                         </Col>
                                     </Row>
                                 )}
+                                <Row className="mt-3">
+                                    <Col md="4">
+                                        <Form.Label className={Styles.form_label}>Search News:</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            placeholder="Search News"
+                                            onChange={handleSearch}
+                                            className={`${Styles.form_control} ${Styles.search_input}`}
+                                        />
+                                    </Col>
+                                </Row>
                             </Form>
                         </Card.Body>
                     </Card>
                 </Col>
             </Row>
-            <Row className="mb-4 ">
-                <Col md="12" className="d-flex justify-content-start ">
-                    <Card className={Styles.card_custom}>
-                        <Card.Body>
-                            <Form.Group className="mb-3">
-                                <Form.Label className={Styles.form_label}>Search News:</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    onChange={handleSearch}
-                                    className={`${Styles.form_control} ${Styles.search_input}`}
-                                />
-                            </Form.Group>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-            <Row className="mt-5 ">
+            <Row className="mt-5">
                 <Col>
                     <NewsList newsList={searchResults.reverse()} handleEdit={handleEdit} handleDelete={handleDelete} />
                 </Col>

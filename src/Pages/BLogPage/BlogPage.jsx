@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Profile from "../../Assets/Pics/profile.jpg";
+import Profile from "../../Assets/Pics/profile.png";
 import Styles from "./BlogPage.module.css";
 import Blogs from "../../Assets/Data/Blogs";
 import FeaturedPost from "../../Components/FeaturedPosts/FeaturedPost";
@@ -44,7 +44,7 @@ const BlogPage = () => {
                 </p>
               </div>
             </div>
-            <h2>Latest News</h2>
+            <h2 className={Styles.margining}>Latest News</h2>
             <section className={`my-5 ${Styles.news_section}`}>
               <div className={Styles.news_content_wrapper}>
                 {News.map((item, i) => (

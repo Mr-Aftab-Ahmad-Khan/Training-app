@@ -134,7 +134,7 @@ const Home = () => {
               <h1>Our Motive</h1>
               <Row className={Styles.content}>
                 <Col md={6}>
-                  <FaLeaf size={30} />
+                  <FaLeaf size={30} color="#149092"/>
                   <h4>QUALITY PRODUCTS</h4>
                   <p>
                     We believe in Software Quality that is essential to deliver
@@ -142,7 +142,7 @@ const Home = () => {
                   </p>
                 </Col>
                 <Col md={6}>
-                  <GoClockFill size={30} />
+                  <GoClockFill size={30} color="#149092"/>
                   <h4>TIMELY WORK</h4>
                   <p>
                     We always plan the Project Development schedule for
@@ -153,7 +153,7 @@ const Home = () => {
               </Row>
               <Row>
                 <Col md={6}>
-                  <TfiWorld size={30} />
+                  <TfiWorld size={30} color="#149092"/>
                   <h4>RELIABILITY</h4>
                   <p>
                     Failure Free Products are our main target. We always develop
@@ -162,7 +162,7 @@ const Home = () => {
                   </p>
                 </Col>
                 <Col md={6}>
-                  <FaAnchor size={30} />
+                  <FaAnchor size={30} color="#149092"/>
                   <h4>MAINTAINABLE</h4>
                   <p>
                     Our Products are fully maintainable for the injection of any

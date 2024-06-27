@@ -31,17 +31,17 @@ const CoursesCrud = () => {
     setCurrentCourse(course);
     setImg(course.img);
     setTitle(course.title);
-    setDesc(course.Desc);
-    setCategory(course.Category);
+    setDesc(course.desc);
+    setCategory(course.category);
     setDuration(course.duration);
-    setEnvironment(course.enviroment);
+    setEnvironment(course.environment);
   };
 
   const updateHandler = (e) => {
     e.preventDefault();
     const updatedCourses = courses.map((course) =>
       course.id === currentCourse.id
-        ? { ...course, img, title, Desc: desc, Category: category, duration, enviroment: environment }
+        ? { ...course, img, title, desc, category, duration, environment }
         : course
     );
     setCourses(updatedCourses);
@@ -55,15 +55,16 @@ const CoursesCrud = () => {
   };
 
   const handleSearch = (e) => {
-    const toBeSearch = e.target.value.toLowerCase();
-    const searchByList = CoursesData.filter(course =>
-      course.title.toLowerCase().includes(toBeSearch) ||
-      course.Desc.toLowerCase().includes(toBeSearch) ||
-      course.Category.toLowerCase().includes(toBeSearch) ||
-      course.duration.toLowerCase().includes(toBeSearch) ||
-      course.enviroment.toLowerCase().includes(toBeSearch)
+    const searchTerm = e.target.value.toLowerCase();
+    const searchResults = CoursesData.filter(
+      (course) =>
+        course.title.toLowerCase().includes(searchTerm) ||
+        course.Desc.toLowerCase().includes(searchTerm) ||
+        course.Category.toLowerCase().includes(searchTerm) ||
+        course.duration.toLowerCase().includes(searchTerm) ||
+        course.enviroment.toLowerCase().includes(searchTerm)
     );
-    setCourses(searchByList);
+    setCourses(searchResults);
   };
 
   const submitHandler = (e) => {
@@ -75,10 +76,10 @@ const CoursesCrud = () => {
         id: String(courses.length + 1),
         img,
         title,
-        Desc: desc,
-        Category: category,
+        desc,
+        category,
         duration,
-        enviroment: environment,
+        environment,
       };
       setCourses([newCourse, ...courses]);
       setImg("");
@@ -91,17 +92,19 @@ const CoursesCrud = () => {
   };
 
   return (
-    <Container className={`{mt-3} ${Styles.scrollView}`} >
+    <Container className={`${Styles.scrollView} mt-3`}>
       <h1>Add & Update Courses</h1>
       <Row className="justify-content-center mb-4">
         <Col md="12">
           <Card className={Styles.card_custom}>
             <Card.Body>
               <Form onSubmit={submitHandler} className={Styles.form_custom}>
-                <Row>
+                <Row className="mb-3">
                   <Col md="2">
                     <Form.Group controlId="formImg" className="mb-3">
-                      <Form.Label className={Styles.form_label}>Image URL</Form.Label>
+                      <Form.Label className={Styles.form_label}>
+                        Image URL
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         value={img}
@@ -113,7 +116,9 @@ const CoursesCrud = () => {
                   </Col>
                   <Col md="2">
                     <Form.Group controlId="formTitle" className="mb-3">
-                      <Form.Label className={Styles.form_label}>Title</Form.Label>
+                      <Form.Label className={Styles.form_label}>
+                        Title
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         value={title}
@@ -125,7 +130,9 @@ const CoursesCrud = () => {
                   </Col>
                   <Col md="2">
                     <Form.Group controlId="formCategory" className="mb-3">
-                      <Form.Label className={Styles.form_label}>Category</Form.Label>
+                      <Form.Label className={Styles.form_label}>
+                        Category
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         value={category}
@@ -137,7 +144,9 @@ const CoursesCrud = () => {
                   </Col>
                   <Col md="2">
                     <Form.Group controlId="formDuration" className="mb-3">
-                      <Form.Label className={Styles.form_label}>Duration</Form.Label>
+                      <Form.Label className={Styles.form_label}>
+                        Duration
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         value={duration}
@@ -149,7 +158,9 @@ const CoursesCrud = () => {
                   </Col>
                   <Col md="2">
                     <Form.Group controlId="formEnvironment" className="mb-3">
-                      <Form.Label className={Styles.form_label}>Environment</Form.Label>
+                      <Form.Label className={Styles.form_label}>
+                        Environment
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         value={environment}
@@ -160,9 +171,27 @@ const CoursesCrud = () => {
                     </Form.Group>
                   </Col>
                   <Col md="2" className="d-flex align-items-start mt-4">
-                    <Button type="submit" className={`w-100 ${Styles.create_btn}`}>
+                    <Button
+                      type="submit"
+                      className={`w-100 ${Styles.create_btn}`}
+                    >
                       {editing ? "Update" : "Create"}
                     </Button>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md="4">
+                    <Form.Group controlId="formSearch">
+                      <Form.Label className={Styles.form_label}>
+                        Search Courses
+                      </Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="Search Courses"
+                        onChange={handleSearch}
+                        className={Styles.form_control}
+                      />
+                    </Form.Group>
                   </Col>
                 </Row>
               </Form>
@@ -170,38 +199,40 @@ const CoursesCrud = () => {
           </Card>
         </Col>
       </Row>
-      <Row className="justify-content-start mb-4">
-        <Col md="4">
-          <Card className={Styles.card_custom}>
-            <Card.Body>
-              <Form.Group controlId="formSearch">
-                <Form.Label className={Styles.form_label}>Search Courses</Form.Label>
-                <Form.Control
-                  type="text"
-                  onChange={handleSearch}
-                  className={Styles.form_control}
-                />
-              </Form.Group>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      <Row className="justify-content-start "></Row>
       <Row className="mt-5">
-        <Col >
+        <Col>
           <div className={Styles.course_list}>
             {courses.map((course) => (
               <Card key={course.id} className={`mb-4 ${Styles.course_item}`}>
-                <Card.Img variant="top" src={course.img} className={Styles.card_img} />
+                <Card.Img
+                  variant="top"
+                  src={course.img}
+                  className={Styles.card_img}
+                />
                 <Card.Body>
                   <Card.Title>{course.title}</Card.Title>
                   <Card.Text>{course.Desc}</Card.Text>
-                  <Card.Text><strong>{course.Category}</strong></Card.Text>
-                  <Card.Text><strong>Duration:</strong> {course.duration}</Card.Text>
-                  <Card.Text><strong>Environment:</strong> {course.enviroment}</Card.Text>
-                  <Button variant="warning" className="me-2" onClick={() => editHandler(course)}>
+                  <Card.Text>
+                    <strong>{course.Category}</strong>
+                  </Card.Text>
+                  <Card.Text>
+                    <strong>Duration:</strong> {course.duration}
+                  </Card.Text>
+                  <Card.Text>
+                    <strong>Environment:</strong> {course.enviroment}
+                  </Card.Text>
+                  <Button
+                    variant="warning"
+                    className="me-2"
+                    onClick={() => editHandler(course)}
+                  >
                     Edit
                   </Button>
-                  <Button variant="danger" onClick={() => deleteHandler(course.id)}>
+                  <Button
+                    variant="danger"
+                    onClick={() => deleteHandler(course.id)}
+                  >
                     Delete
                   </Button>
                 </Card.Body>

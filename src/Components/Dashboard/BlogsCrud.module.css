@@ -6,6 +6,10 @@
 .scrollView::-webkit-scrollbar{
   display: none;
 }
+.quillEditor {
+  height: 200px; /* Adjust height as needed */
+}
+
 .form {
   background: #fff;
   padding: 20px;

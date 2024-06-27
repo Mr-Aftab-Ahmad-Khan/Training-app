@@ -138,12 +138,13 @@ const BlogsCrud = () => {
                     value={newBlog.Bdesc}
                     onChange={(value) => setNewBlog({ ...newBlog, Bdesc: value })}
                     modules={{ toolbar: true }}
+                    className={Styles.quillEditor} // Apply custom class for styling
                   />
                 </Form.Group>
               </Col>
             </Row>
             <Row>
-              <Col md="12" className="d-flex justify-content-end">
+              <Col md="12" className="d-flex justify-content-end mt-5">
                 <Button variant="primary" type="submit" className="me-2">
                   {editingBlogId !== null ? 'Update Blog' : 'Create Blog'}
                 </Button>
@@ -158,19 +159,18 @@ const BlogsCrud = () => {
         </Col>
       </Row>
       <Row className={`${Styles.searchGroup} mb-4`}>
-  <Col md="4">
-    <Form.Group controlId="searchBar">
-      <Form.Label>Search</Form.Label>
-      <Form.Control
-        type="text"
-        placeholder="Search blogs..."
-        onChange={handleSearch}
-        className={Styles.searchControl}
-      />
-    </Form.Group>
-  </Col>
-</Row>
-
+        <Col md="4">
+          <Form.Group controlId="searchBar">
+            <Form.Label>Search</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Search blogs..."
+              onChange={handleSearch}
+              className={Styles.searchControl}
+            />
+          </Form.Group>
+        </Col>
+      </Row>
       <Row className="justify-content-center mt-4">
         <Col md="12">
           <Table striped bordered hover className={Styles.blogTable}>

@@ -4,7 +4,7 @@
   border-top: 1px solid black;
 }
 .stepCard {
-  background-color: #ceddf6 !important;
+  background-color: #65c2b7cb !important;
   border: none;
   border-radius: 15px;
   padding: 20px;
@@ -43,4 +43,12 @@
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
+}
+@media only screen and (max-width: 768px) {
+  .stepShape{
+    margin-top: 0;
+}
+.stepShape2{
+    margin-top: 0;
+}
 }

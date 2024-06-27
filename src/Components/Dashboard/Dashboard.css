@@ -16,7 +16,7 @@
 
 .dashboard_container {
   background-color: var(--background-color1);
-  max-height: 90vh;
+  max-height: 100vh;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -50,6 +50,7 @@
 .nav-option.active {
   background-color: var(--active-tab-background);
   border-left: 4px solid var(--primary-color);
+  cursor: pointer;
 }
 
 .main-content {
@@ -141,4 +142,37 @@
     flex: 1 1 calc(100% - 20px); /* One card per row on small screens */
     max-width: calc(100% - 20px);
   }
+}
+.user-management {
+  padding: 20px;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.user-role {
+  color: #666;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
 }
