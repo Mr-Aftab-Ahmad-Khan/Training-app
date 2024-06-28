@@ -1,5 +1,6 @@
 const Trainers = [
     {
+      id:1,
       Avatar:
         "https://images.unsplash.com/photo-1500048993953-d23a436266cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBlcnNvbnxlbnwwfDB8MHx8fDA%3D",
       Name: "Aftab Ahmad",
@@ -7,6 +8,7 @@ const Trainers = [
       Designation: "Full Stack",
     },
     {
+      id:2,
       Avatar:
         "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBlcnNvbnxlbnwwfDB8MHx8fDA%3D",
       Name: "Zain Chaudhary",
@@ -14,6 +16,7 @@ const Trainers = [
       Designation: "UI/UX DESIGNER",
     },
     {
+      id:3,
       Avatar:
         "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBlcnNvbnxlbnwwfDB8MHx8fDA%3D",
       Name: "Usama Janbaz",

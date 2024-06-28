@@ -1,9 +1,9 @@
-.scrollview{
-  height: 90vh;
-  overflow-x: hidden;
+.scrollView{
+  height: 80vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
-.scrollview::-webkit-scrollbar{
+.scrollView::-webkit-scrollbar{
   display: none;
 }
 .form-label {
@@ -17,15 +17,16 @@
 .create-btn {
   margin-top: 0.5rem;
 }
-.scrollView{
-    overflow-y: scroll !important;
-    height: 300px !important;
-  
-}
 
-.event-table th, .event-table td {
+.trainer-table th, .trainer-table td {
   text-align: center;
   vertical-align: middle;
+}
+
+.trainer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .search-group {

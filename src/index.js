@@ -1,22 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { Auth0Provider } from '@auth0/auth0-react';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-// import "@fortawesome/fontawesome-free/css/all.min.css";
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { Auth0Provider } from "@auth0/auth0-react";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import {KindeProvider} from "@kinde-oss/kinde-auth-react";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  // <React.StrictMode>
-  // <Auth0Provider
-  //   domain="dev-gtat6gks0jeme5l8.us.auth0.com"
-  //   clientId="JcEYsia4hzuEpNriByzGJfepX5xJ10bU"
-  //   authorizationParams={{
-  //     redirect_uri: window.location.origin
-  //   }}
-  // >
-    <App />
-    // </Auth0Provider>
-  // </React.StrictMode>
+  <KindeProvider
+  clientId="3cd48b2882e0459ba349ce0e2cbb3bb4"
+  domain="https://bzsoftech.kinde.com"
+  redirectUri="http://localhost:3000"
+  logoutUri="http://localhost:3000"
+>
+    <Router>
+      <App />
+    </Router>
+    </KindeProvider>
 );

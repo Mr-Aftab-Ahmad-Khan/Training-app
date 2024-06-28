@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 import  ReactQuill  from 'react-quill'
 import 'react-quill/dist/quill.snow.css';
 
-const BlogEditor = () => {
+const BlogEditor = (Bdesc, onChange) => {
     const [showHead,setShowHead]=useState()
     const [head,setHead]=useState()
     const headerToolbarOptions = [
@@ -33,10 +33,7 @@ const toolbarOptions = [
     return (
     <Container>
     <div>
-        <button onClick={()=>{setShowHead(!showHead)}}>+</button>
-   {showHead && <ReactQuill theme='snow' modules={{toolbar: headerToolbarOptions}} value={head} placeholder='Heading' onChange={setHead}/>}
-        <ReactQuill theme='snow' modules={{toolbar: toolbarOptions}} value={blog} onChange={setBlog}/></div>
-        {head}
+        <ReactQuill theme='snow'key={Bdesc} modules={{toolbar: toolbarOptions}} value={blog} onChange={setBlog}/></div>
     </Container>
   )
 }

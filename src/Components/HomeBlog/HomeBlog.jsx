@@ -8,9 +8,9 @@ import Blogs from "../../Assets/Data/Blogs";
 const HomeBlog = () => {
  
   return (
-    <Container className={Styles.blogList}>
+    <Container className={`${Styles.blogList} `}>
       <h2 className={Styles.blogHeading}>Blogs & Articles</h2>
-      <Row>
+      <Row className="mt-5">
         {Blogs.map((blog) => (
           <Col key={blog.id} md={4} className={Styles.blogCard}>
             <Card>
@@ -23,7 +23,7 @@ const HomeBlog = () => {
                   <Badge bg="warning">Category: {blog.BCategory}</Badge>
                 </Card.Title>
                 <Card.Text>{blog.BTitle}</Card.Text>
-                <Link to={`/BlogDetail/${blog.id}`}>
+                <Link to={`/BlogDetail/${blog.id}`} className={Styles.more_detail}>
                   More Details <FaArrowCircleRight />
                 </Link>
               </Card.Body>

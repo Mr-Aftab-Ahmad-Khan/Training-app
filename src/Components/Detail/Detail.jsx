@@ -42,10 +42,7 @@ const Detail = () => {
           <Link to="/Courses">Back to Courses</Link>
           <p></p>
           <Link
-            to={{
-              pathname: "/ContactUs",
-              search: `?id=${courseDetail.id}&title=${courseDetail.title}`
-            }}
+            to={`/ContactUs?id=${courseDetail.id}&title=${courseDetail.title}`}
           >
             Enroll Now
           </Link>

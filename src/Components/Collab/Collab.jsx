@@ -11,6 +11,7 @@ import Collab8 from "../../Assets/Pics/collab8.png";
 import Collab9 from "../../Assets/Pics/collab9.png";
 import Styles from './Collab.module.css'
 import { Autoplay } from "swiper/modules";
+import './CollabStyleHandler.css'
 function Collab() {
   var settings = {
     dots: false,

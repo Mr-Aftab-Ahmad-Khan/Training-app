@@ -1,3 +1,10 @@
+@media only screen and (max-width: 767px) {
+  .marging {
+    margin-top: 3rem; /* Adjust top margin for mobile */
+    margin-bottom: 1rem; /* Adjust bottom margin for mobile */
+  }
+}
+
 .stamp{
     color: grey;
     border-bottom: .7px solid red ;
@@ -10,7 +17,7 @@
   }
   
   .events_title {
-    background-color: #faa916;
+    background-color: #149092;
     padding: 0.5rem 1.5rem;
     text-align: center;
     color: var(--text-color);
@@ -28,7 +35,7 @@
   .news_content_wrapper {
     display: flex;
     flex-direction: column;
-    animation: scrollNews 50s linear infinite;
+    animation: scrollNews 350s linear infinite;
   }
   
   .news_content {

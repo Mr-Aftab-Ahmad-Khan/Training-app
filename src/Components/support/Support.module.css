@@ -1,39 +1,75 @@
 /* Support.module.css */
 
 .support {
-    position: fixed;
-    bottom: 2rem;
-    left: 85%;
-    /* transform: translateX(100%); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+  position: fixed;
+  bottom: 2rem;
+  left: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.support:hover {
+  transform: scale(1.1);
+}
+
+.supportIcon {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.supportLink {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.supportLink:hover {
+  color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+  .support {
+    left: 80%;
   }
-  
-  .support:hover {
-    transform: scale( 1.1);
+}
+
+@media (max-width: 992px) {
+  .support {
+    left: 75%;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .support {
+    left: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .support {
+    bottom: 1rem;
+    left: 1%;
+    transform: translateX(0%);
+    padding: 10px;
+  }
+
   .supportIcon {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
+    width: 40px;
+    margin-right: 5px;
   }
-  
+
   .supportLink {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    font-size: 0.9rem;
   }
-  
-  .supportLink:hover {
-    color: #0056b3;
-  }
-  
+}

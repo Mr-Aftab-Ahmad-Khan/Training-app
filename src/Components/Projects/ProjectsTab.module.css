@@ -1,3 +1,4 @@
+
 .project_card_holder {
     display: flex;
     flex-wrap: wrap;
@@ -10,11 +11,12 @@
     position: relative;
     width: 300px;
     height: auto;
-    background: #CEDDF6;
+    background: #60ccbf83;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(145, 229, 235, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
+    color: white;
   }
   
   .project_card img {
@@ -122,4 +124,34 @@
     position: relative;
     z-index: 2;
   }
-  
+  /* ProjectsTab.module.css */
+
+.nav_arrows {
+  display: none; /* Initially hide arrows */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .nav_arrows {
+    display: flex; /* Show arrows below 768px */
+  }
+}
+
+.nav_arrow {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #000;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav_arrow:hover {
+  background-color: #000;
+  color: #fff;
+}

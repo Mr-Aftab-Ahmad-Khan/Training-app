@@ -41,20 +41,21 @@
 
 .content {
   gap: 1rem;
+  padding-left: 1rem;
 }
 
 .papil-card {
   width: 450px;
   height: 200px;
   display: flex;
-  background-color: var(--primary);
+  background-color: #5FAA97;
   border: 0px solid transparent;
   border-radius: 30px 30px 30px 30px;
   position: relative;
   border: 0px solid grey;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   top: 4rem;
-  left: 2rem;
+  left: 2.5rem;
 }
 
 .papil_left {
@@ -105,12 +106,13 @@
   .papil-card {
     width: 300px;
     display: flex;
-    background-color: rgb(109, 95, 95);
+    background-color:#5FAA97;
+    color: white;
     border: 0px solid transparent;
     border-radius: 30px 30px 30px 30px;
     position: relative;
     top: 1rem;
-    left: 0rem;
+    left: 2.5rem;
   }
 }
 
@@ -129,7 +131,7 @@
     flex-wrap: wrap;
     background-color: var(--primary);
     color: var(--text-color);
-    padding: 5.5rem;
+    padding: 2rem 1.5rem;
   }
 }
 .expertise-left {

@@ -7,58 +7,56 @@
   align-items: center;
   background-color: #332D2D !important;    
 }
-.page_header h1{
-    font-size: 5rem !important;
-    font-weight: bolder !important;
-    background: linear-gradient(90deg, #4ca5ff, #b573f8);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    box-shadow: rgba(109, 108, 108, 0.35) 0px 5px 15px;
-    padding: .5rem;
-}
-.courseHead {
-  height: 300px;
-  width: 100%;
-  text-align: center;
-  background: var(--primary); /* Add your background image if needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: underline;
-  color: var(--text-color);
-  font-size: 2rem;
-  font-weight: bold;
-}
-.courseCard {
 
-    width: 400px;
-    position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
-    margin: 15px 0px; /* Decreased horizontal margin */
-    background: #fafafa;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.page_header h1 {
+  font-size: 5rem !important;
+  font-weight: bolder !important;
+  background: linear-gradient(90deg, #4ca5ff, #b573f8);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  box-shadow: rgba(109, 108, 108, 0.35) 0px 5px 15px;
+  padding: .5rem;
 }
-
-.wrapper {
+@media only screen and (max-width: 767px) {
+  .page_header {
+    height: 100px;
+    width: 100%;
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0 0.03rem;; /* Decreased horizontal padding */
+    justify-content: center;
+    align-items: center;
+    background-color: #332D2D !important;    
+  }
+  .page_header h1{
+      font-size: 2rem !important;
+      font-weight: bolder !important;
+      background: linear-gradient(90deg, #4ca5ff, #b573f8);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      box-shadow: rgba(109, 108, 108, 0.35) 0px 5px 15px;
+      padding: .5rem;
+}}
 
-  width: 400px;
+
+.courseCard {
+  width: 400px; /* Adjust the width as needed */
   position: relative;
-  box-shadow: 0 2px 7px #dfdfdf;
-  margin: 15px 0px; /* Decreased horizontal margin */
+  margin: 5px; /* Adjust margin for spacing */
   background: #fafafa;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: hidden;
 }
 
 .wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0 0.05rem; /* Decreased horizontal padding */
-
+  gap: 1rem; /* Adjust gap for spacing */
+  padding: 1rem;
 }
 
 .badge {
@@ -69,13 +67,14 @@
   font-size: 13px;
   font-weight: 700;
   background: red;
-  color: var(--text-color);
+  color: white;
   padding: 3px 10px;
 }
+
 .explore_btn {
   display: inline-block;
   border-radius: 20px;
-  background-color: #3d405b;
+  background-color:#82CCC5;
   border: none;
   color: white;
   text-align: center;
@@ -116,8 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;
-  width: 100%;
+  height: 200px;
   background: #f0f0f0;
 }
 
@@ -127,7 +125,11 @@
 }
 
 .courseDetails {
-  padding: 30px;
+  padding: 20px;
+  flex: 1; /* Make details take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .courseCategory {
@@ -135,22 +137,16 @@
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--text-color);
+  color: #333;
   margin-bottom: 18px;
 }
 
-.courseDetails h4 a {
+.courseDetails h4 {
   font-weight: 500;
   display: block;
   margin-bottom: 18px;
   text-transform: uppercase;
   color: #363636;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.courseDetails h4 a:hover {
-  color: #fbb72c;
 }
 
 .courseDetails p {
@@ -192,7 +188,7 @@
 .courseLinks a {
   display: inline-block;
   margin-left: 5px;
-  color: var(--text-color);
+  color: #333;
   transition: 0.3s;
   font-size: 17px;
 }
@@ -203,7 +199,5 @@
 
 .iconContainer {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 0.3rem;
+  gap: 0.3rem; /* Adjust gap for spacing */
 }

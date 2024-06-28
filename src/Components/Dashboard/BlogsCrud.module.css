@@ -1,0 +1,53 @@
+.scrollView{
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.scrollView::-webkit-scrollbar{
+  display: none;
+}
+.quillEditor {
+  height: 200px; /* Adjust height as needed */
+}
+
+.form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.searchGroup {
+  display: flex;
+  align-items: center;
+}
+
+.searchControl {
+  width: 100%;
+}
+
+.blogTable {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blogImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}

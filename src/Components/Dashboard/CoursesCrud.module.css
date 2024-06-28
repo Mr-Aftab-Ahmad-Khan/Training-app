@@ -1,0 +1,48 @@
+.scrollView{
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.scrollView::-webkit-scrollbar{
+  display: none;
+}
+.container_custom {
+  margin-top: 2rem;
+}
+
+.card_custom {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form_custom {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_label {
+  font-weight: bold;
+}
+
+.form_control {
+  margin-top: 0.5rem;
+}
+
+.create_btn {
+  margin-top: 1rem;
+}
+
+.course_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.course_item {
+  width: 32%;
+}
+
+.card_img {
+  height: 200px;
+  object-fit: cover;
+}
