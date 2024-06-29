@@ -19,6 +19,7 @@ import BlogDetail from "./Components/Detail/BlogDetail";
 import ProjectDetail from "./Components/Detail/ProjectDetail";
 import Services from "./Pages/Services/Services";
 import Support from "./Components/support/Support";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   const location = useLocation();
@@ -45,7 +46,7 @@ function App() {
           <Route path="/Detail/:courseId" element={<Detail />} />
           <Route path="/BlogDetail/:blogId" element={<BlogDetail />} />
           <Route path="/ProjectDetail/:projectId" element={<ProjectDetail />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFound />} /> {/* Render NotFound for unmatched routes */}
         </Routes>
         {!isAdminRoute && <Footer />}
       </>
