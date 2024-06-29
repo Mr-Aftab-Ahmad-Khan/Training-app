@@ -27,8 +27,7 @@ const BlogPage = () => {
               <h1>Awais Khalid</h1>
               <div className={Styles.about_author}>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia in dicta, quos ducimus ipsam quam!
+                 Talented Content Writer
                 </p>
                 <b>Role: Content Writer</b>
                 <p>
