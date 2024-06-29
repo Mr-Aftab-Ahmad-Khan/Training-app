@@ -50,7 +50,7 @@ const Services = () => {
             </div>
             <div className={Styles.circle_3}>
               <h4>03</h4>
-              <h3>Analysis and Planning</h3>
+              <h3>Analysis and Out Results</h3>
               <p>
                 The process begins by thoroughly understanding the client's
                 objectives.
