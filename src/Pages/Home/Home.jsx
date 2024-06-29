@@ -27,6 +27,7 @@ import HowItWorks from "../../Components/HowItWorks/HowItWorks";
 import Collab from "../../Components/Collab/Collab";
 import Ceo from "../../Components/CEO/Ceo";
 import HomeBlog from "../../Components/HomeBlog/HomeBlog";
+import ModalBox from "../../Components/ModalBox/ModalBox";
 
 const Home = () => {
   // Set the count state for keep counting
@@ -182,10 +183,7 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* =================================================Services */}
-      {/* <Services /> */}
-      {/* ========================================Trainer */}
-      {/* <HomeTrainer /> */}
+      <ModalBox/>
       <Ceo/>
       {/* =================================================Testimonial */}
       <HomeBlog/>

@@ -1,0 +1,116 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.modalBoxSection {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #e3f2fd;
+}
+
+button {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  padding: 14px 22px;
+  border: none;
+  background: #4ABBB0;
+  border-radius: 46px !important;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1c524c;
+}
+
+.modalBoxShowModal,
+.modalBoxContent {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modalBoxSection.modalBoxActive .modalBoxShowModal {
+  display: none;
+}
+
+.modalBoxOverlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modalBoxSection.modalBoxActive .modalBoxOverlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalBoxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 380px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 24px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.modalBoxSection.modalBoxActive .modalBoxContent {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.modalBoxContent h2 {
+  margin-top: 20px;
+  margin-left: -50px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .modalBoxContent h2 {
+    margin-top: 20px;
+    margin-left: 0px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+  }
+}
+
+.modalBoxContent h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
+
+.modalBoxButtons {
+  margin-top: 25px;
+}
+
+.modalBoxButtons button {
+  font-size: 14px;
+  padding: 6px 12px;
+  margin: 0 10px;
+}

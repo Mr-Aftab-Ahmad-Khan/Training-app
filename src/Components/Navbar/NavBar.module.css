@@ -38,17 +38,18 @@
 .nav_link:active,
 .nav_link.active {
   color: var(--primary) !important;
-  font-weight: 800 !important;
+  /* font-weight: 800 !important; */
   background-color: rgba(255, 255, 255, 0.1) !important;
   border-bottom: 2px solid var(--primary) !important; /* Increased border width for active links */
 }
 
 .nav_link:not(:first-child) {
-  margin-left: 15px; /* Increased spacing between nav links */
+  margin-left: 5px; 
 }
 
 .profile_dropdown {
   margin-left: 1rem;
+  transform: translateX(10px);
   min-width: 200px; /* Ensure a minimum width for the dropdown */
 }
 
