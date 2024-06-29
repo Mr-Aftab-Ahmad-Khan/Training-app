@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Container, Dropdown } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
-import axios from "axios";
-import Styles from "./NavBar.module.css";
-import logo from "../../Assets/Pics/bzsoftech-logo.png";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
+import Styles from "./NavBar.module.css";
+import logo from "../../Assets/Pics/bzsoftech-logo.png";
 
 const ModernNavbar = () => {
-  const { login, logout, isAuthenticated, user, getToken } = useKindeAuth();
+  const { login, logout, isAuthenticated, user } = useKindeAuth();
   const [expanded, setExpanded] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [activeLink, setActiveLink] = useState("");
@@ -21,7 +20,7 @@ const ModernNavbar = () => {
   }, [location]);
 
   useEffect(() => {
-    if (isAuthenticated && user && user.id === 'kp_b3bfcfd0cb2840388989f37c18948c74') {
+    if (isAuthenticated && user?.id === 'kp_b3bfcfd0cb2840388989f37c18948c74') {
       setIsAdmin(true);
     } else {
       setIsAdmin(false);
@@ -48,7 +47,7 @@ const ModernNavbar = () => {
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className={Styles.brand}>
-          <img src={logo} alt="" width={200} />
+          <img src={logo} alt="BZ Softech" width={200} />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
@@ -123,7 +122,7 @@ const ModernNavbar = () => {
                 </Dropdown.Menu>
               </Dropdown>
             ) : (
-              <button onClick={() => login()} className={Styles.login_button}>
+              <button onClick={login} className={Styles.login_button}>
                 <span className={Styles.button_content}>Log In</span>
               </button>
             )}

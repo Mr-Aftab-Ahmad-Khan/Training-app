@@ -6,6 +6,7 @@ import Styles from "./Services.module.css";
 import Projects from "../../Assets/Data/Projects";
 import { Link } from "react-router-dom";
 import ProjectsTab from "../../Components/Projects/ProjectsTab";
+import Consultation from "../../Components/Consultation/Consultation";
 
 const Services = () => {
   return (
@@ -68,6 +69,7 @@ const Services = () => {
       </Container>
 
       <ProjectsTab />
+      <Consultation/>
     </div>
   );
 };
