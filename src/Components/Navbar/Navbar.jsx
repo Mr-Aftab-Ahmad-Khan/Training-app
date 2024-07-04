@@ -12,7 +12,6 @@ const ModernNavbar = () => {
   const [expanded, setExpanded] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [activeLink, setActiveLink] = useState("");
-
   const location = useLocation();
 
   useEffect(() => {
