@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import HeaderInfo from "./Components/Header-Info/HeaderInfo";
 import ModernNavbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
@@ -20,9 +20,22 @@ import ProjectDetail from "./Components/Detail/ProjectDetail";
 import Services from "./Pages/Services/Services";
 import Support from "./Components/support/Support";
 import NotFound from "./Components/NotFound/NotFound";
+import Loader from "./Components/LazyLoading/Loader"; // Adjust path as necessary
 
 function App() {
   const location = useLocation();
+  const [loading, setLoading] = useState(false); // Initial loading state set to false
+
+  useEffect(() => {
+    setLoading(true); // Set loading to true when component mounts
+
+    // Simulate loading delay (remove this in production)
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading to false after delay
+    }, 1500); // Adjust delay as needed or remove for actual data fetching
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -56,7 +69,11 @@ function App() {
   return (
     <div className="App">
       <HeaderInfo />
-      <MainContent />
+      {loading ? (
+        <Loader /> // Show loader while loading
+      ) : (
+        <MainContent /> // Render main content when not loading
+      )}
     </div>
   );
 }
